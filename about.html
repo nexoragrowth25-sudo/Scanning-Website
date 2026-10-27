@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Sunrise Metrology Solutions | Pioneers in Precision 3D Metrology</title>
+  <meta name="description" content="Learn about Sunrise Metrology Solutions, founded in 2020 by Amol Palande. Over 15 years of metrology leadership providing 3D scanning, laser tracker and CMM services across India.">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/leaflet.css">
+</head>
+<body>
+
+  <!-- Main Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Sunrise Metrology Solutions Homepage">
+        <img src="images/logo-primary.svg" alt="Sunrise Metrology Solutions" width="290" height="70">
+      </a>
+
+      <!-- Desktop Nav (Original Page Names Preserved) -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link active">About Us</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="equipment.html" class="nav-link">Equipment &amp; Technology</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <a href="tel:+919975232333" class="nav-phone-link" aria-label="Call +91 9975 232 333">
+          <span>Call Us: +91 9975 232 333</span>
+        </a>
+        <a href="contact.html" class="btn-get-in-touch">
+          <span>Get In Touch</span>
+          <span class="btn-arrow">↗</span>
+        </a>
+
+        <!-- Mobile Toggle -->
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <img src="images/logo-primary.svg" alt="Sunrise Metrology" style="max-height:42px; width:auto;">
+      <button class="drawer-close" id="drawerClose">&times;</button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="index.html" class="drawer-link">Home</a></li>
+      <li><a href="about.html" class="drawer-link active">About Us</a></li>
+      <li><a href="services.html" class="drawer-link">Services</a></li>
+      <li><a href="equipment.html" class="drawer-link">Equipment &amp; Technology</a></li>
+      <li><a href="contact.html" class="drawer-link">Contact Us</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <a href="tel:+919975232333" class="btn btn-primary" style="width:100%;">Call +91 9975 232 333</a>
+      <a href="contact.html" class="btn btn-blue" style="width:100%;">Get In Touch ↗</a>
+    </div>
+  </aside>
+
+  <!-- Page Hero (Reference Layout with Original Data) -->
+  <section class="page-hero-ref-section">
+    <div class="container">
+      <div class="hero-ref-grid">
+        <div class="hero-ref-left">
+          <div class="hero-ref-tag">
+            <span class="ref-bar">|</span>
+            <span class="ref-tag-text">Est. 2020 · Pan-India Service</span>
+            <span class="ref-flag">🇮🇳</span>
+          </div>
+          <!-- Hero Main Title (Original Data Preserved) -->
+          <h1 class="hero-ref-title">
+            <span class="title-highlight">About Sunrise</span>
+            <span class="title-dark">Metrology Solutions</span>
+          </h1>
+          <!-- Hero Subtitle (Original Data Preserved) -->
+          <p class="hero-ref-desc">
+            Pioneering metrology-grade 3D scanning, laser tracking, and reverse engineering services tailored to modern manufacturing requirements across India.
+          </p>
+          <div class="hero-ref-actions">
+            <a href="contact.html" class="btn-get-in-touch" style="font-size:1rem; padding:0.75rem 1.75rem;">
+              <span>Get In Touch</span>
+              <span class="btn-arrow">↗</span>
+            </a>
+            <a href="tel:+919975232333" class="btn-ref-phone">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span>Call Us: +91 9975 232 333</span>
+            </a>
+          </div>
+          <div class="hero-ref-breadcrumb">
+            <a href="index.html">Home</a> &nbsp;/&nbsp; <span>About Us</span>
+          </div>
+        </div>
+
+        <div class="hero-ref-right">
+          <div class="hero-diamond-shape">
+            <img src="images/SIogo.png" alt="" class="hero-diamond-logo" aria-hidden="true">
+          </div>
+          <img src="images/heroSection2.png" alt="FARO Design ScanArm Precision Inspection Station" class="hero-machinery-img" loading="eager">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company Overview & Story -->
+  <section class="section section-bg-white">
+    <div class="container">
+      <div style="display:grid; grid-template-columns: 1fr; gap:3rem; align-items:center;" class="lg-grid-2">
+        <div>
+          <span class="section-tag">Our Inception & Growth</span>
+          <h2 class="text-h2" style="margin-bottom:1.25rem;">Founded in 2020 on the Foundation of Accuracy and Reliability</h2>
+          <p style="font-size:1.05rem; color:var(--color-neutral-700); line-height:1.7; margin-bottom:1.25rem;">
+            <strong>Sunrise Metrology Solutions</strong> was established in 2020 with a clear objective: to make world-class 3D optical scanning, coordinate metrology, and high-precision inspection accessible to manufacturing units across India.
+          </p>
+          <p style="font-size:0.95rem; color:var(--color-neutral-600); line-height:1.65; margin-bottom:1.5rem;">
+            Whether dealing with critical aerospace turbine blades, high-speed automotive stampings, railway rolling stock, or massive power generation equipment, precision is never optional. Under the visionary direction of <strong>Amol Palande</strong> (possessing over 15 years of industry leadership), our company has successfully executed over <strong>500+ critical metrology projects</strong> for leading Indian and multinational enterprises.
+          </p>
+          <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:1rem; margin-top:1.5rem;">
+            <div style="background:var(--color-primary-50); border:1px solid var(--color-primary-200); padding:1.25rem; border-radius:12px;">
+              <div style="font-family:var(--font-heading); font-size:1.75rem; font-weight:800; color:var(--color-primary-700);">500+</div>
+              <div style="font-size:0.85rem; color:var(--color-neutral-600); font-weight:600;">Projects Delivered</div>
+            </div>
+            <div style="background:var(--color-primary-50); border:1px solid var(--color-primary-200); padding:1.25rem; border-radius:12px;">
+              <div style="font-family:var(--font-heading); font-size:1.75rem; font-weight:800; color:var(--color-secondary-500);">15+</div>
+              <div style="font-size:0.85rem; color:var(--color-neutral-600); font-weight:600;">Years Leadership Exp.</div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div style="position:relative; border-radius:var(--radius-2xl); overflow:hidden; box-shadow:var(--shadow-xl); border:1px solid var(--color-neutral-200);">
+            <img src="images/AboutImage1.png" alt="Sunrise Metrology 3D scanning operations" style="width:100%; height:420px; object-fit:cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission, Vision & Core Values -->
+  <section class="section section-bg-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Purpose & Principles</span>
+        <h2 class="text-h2 section-title">Driven by Mission. Defined by Precision.</h2>
+        <p class="section-desc">
+          Our foundation rests upon technical integrity, rapid responsiveness, and uncompromising dimensional accuracy.
+        </p>
+      </div>
+
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:2rem;">
+        <!-- Mission -->
+        <div class="feature-card" style="border-top: 4px solid var(--color-primary-600);">
+          <div class="feature-icon-wrapper" style="background:var(--color-primary-100); color:var(--color-primary-600);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="12 8 8 12 12 16 16 12 12 8"></polygon></svg>
+          </div>
+          <h3 style="font-size:1.4rem;">Our Mission</h3>
+          <p style="font-size:0.95rem; line-height:1.65; color:var(--color-neutral-700);">
+            To empower Indian manufacturing industries by providing state-of-the-art 3D scanning, laser tracker alignment, and reverse engineering services directly on-site, minimizing plant downtime and ensuring zero-defect production quality.
+          </p>
+        </div>
+
+        <!-- Vision -->
+        <div class="feature-card" style="border-top: 4px solid var(--color-secondary-400);">
+          <div class="feature-icon-wrapper" style="background:rgba(255,134,49,0.15); color:var(--color-secondary-500);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+          </div>
+          <h3 style="font-size:1.4rem;">Our Vision</h3>
+          <p style="font-size:0.95rem; line-height:1.65; color:var(--color-neutral-700);">
+            To become India's foremost metrology partner of choice, recognized nationally for benchmark accuracy, technological innovation, and engineering integrity across defense, automotive, aerospace, and energy sectors.
+          </p>
+        </div>
+
+        <!-- Motto -->
+        <div class="feature-card" style="border-top: 4px solid var(--color-tertiary-800);">
+          <div class="feature-icon-wrapper" style="background:var(--color-tertiary-100); color:var(--color-tertiary-900);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+          </div>
+          <h3 style="font-size:1.4rem;">Our Motto</h3>
+          <p style="font-size:1.15rem; font-weight:700; color:var(--color-primary-800); margin-bottom:0.5rem; font-family:var(--font-heading);">
+            "Accuracy That Drives Quality"
+          </p>
+          <p style="font-size:0.9rem; color:var(--color-neutral-600); line-height:1.55;">
+            Every single measurement we take, point cloud we acquire, and CAD model we generate directly impacts the performance, safety, and longevity of the end product.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder & Leadership Profile -->
+  <section class="section section-bg-white">
+    <div class="container">
+      <div class="leadership-box">
+        <div class="leadership-grid">
+          <div class="leadership-image-col">
+            <img src="images/AboutImage2.png" alt="Amol Palande Leadership Metrology" style="height:100%; width:100%; object-fit:cover;">
+          </div>
+          <div class="leadership-text-col">
+            <span class="section-tag">Executive Leadership</span>
+            <h2 class="text-h2" style="margin-bottom:0.75rem;">Amol Palande</h2>
+            <div style="font-size:1rem; color:var(--color-primary-600); font-weight:700; margin-bottom:1.25rem;">
+              Founder & Technical Director • 15+ Years Industry Experience
+            </div>
+            <p style="font-size:0.975rem; color:var(--color-neutral-700); line-height:1.7; margin-bottom:1.25rem;">
+              With over fifteen years dedicated exclusively to precision metrology, laser tracking, and automotive tooling quality, Amol Palande spearheads Sunrise Metrology Solutions with technical expertise and operational rigor.
+            </p>
+            <p style="font-size:0.925rem; color:var(--color-neutral-600); line-height:1.65; margin-bottom:1.5rem;">
+              Having led complex metrology operations for defense establishments, locomotive plants, and top-tier OEM assembly lines, his leadership guarantees that every project adheres to international standard operating procedures, stringent traceability, and customer confidentiality.
+            </p>
+            <div style="display:flex; align-items:center; gap:1.5rem; flex-wrap:wrap;">
+              <a href="tel:+919975232333" class="btn btn-primary btn-sm">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                Speak with Amol Palande
+              </a>
+              <a href="mailto:amol.palande@sunrisemetrology.com" style="color:var(--color-primary-700); font-weight:600; font-size:0.9rem;">
+                amol.palande@sunrisemetrology.com
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quality Policy, Standards & Data Security -->
+  <section class="section section-bg-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Quality & Compliance</span>
+        <h2 class="text-h2 section-title">Certified Metrology Standards & Strict Confidentiality</h2>
+        <p class="section-desc">
+          We operate under rigorous quality management frameworks to ensure complete measurement traceability and absolute data protection.
+        </p>
+      </div>
+
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1.75rem;">
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <img src="images/accuracy.png" alt="ISO Alignment">
+          </div>
+          <h4>ISO 9001:2015 Compliant</h4>
+          <p>Every scanning, probing, and CAD inspection workflow adheres to ISO standard inspection protocols and temperature compensation procedures.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <img src="images/skilled-engineers.png" alt="NABL Traceability">
+          </div>
+          <h4>NABL Traceable Calibration</h4>
+          <p>All reference artifacts, laser tracker calibration bars, and FARO arm probes undergo recurring verification traceable to national standards.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <img src="images/data-security.png" alt="Mutual NDA Protection">
+          </div>
+          <h4>Mutual NDA & IP Protection</h4>
+          <p>We execute formal Non-Disclosure Agreements prior to receiving client drawings, physical tooling, or proprietary CAD assemblies.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon-wrapper">
+            <img src="images/quick-response.png" alt="Customer-Friendly Reports">
+          </div>
+          <h4>Transparent GD&T Reports</h4>
+          <p>We deliver comprehensive 3D color deviation maps, pass/fail dimensional charts, and CAD deviation tables that are simple to interpret and act on.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Infrastructure & Pan-India Deployment -->
+  <section class="section section-bg-white">
+    <div class="container">
+      <div style="display:grid; grid-template-columns: 1fr; gap:3rem; align-items:center;" class="lg-grid-2">
+        <div>
+          <div class="real-map-wrapper">
+            <!-- Simple 2-City Map Header -->
+            <div class="map-control-header" style="padding:0.75rem 1rem;">
+              <div class="map-city-tabs">
+                <button type="button" class="map-city-btn active" data-about-city="both" style="padding:0.35rem 0.85rem; font-size:0.8rem;">
+                  <span>🗺️ Regular View (Both Locations)</span>
+                </button>
+                <button type="button" class="map-city-btn" data-about-city="pune" style="padding:0.35rem 0.85rem; font-size:0.8rem;">
+                  <span>📍 Pune Head Office</span>
+                </button>
+                <button type="button" class="map-city-btn" data-about-city="bangalore" style="padding:0.35rem 0.85rem; font-size:0.8rem;">
+                  <span>📍 Bengaluru Hub</span>
+                </button>
+              </div>
+            </div>
+            <!-- Real Leaflet Map Canvas -->
+            <div id="about-map-view" class="real-map-container" style="height:380px;"></div>
+            <!-- Bottom Indicator Strip -->
+            <div style="background:#f8fafc; padding:0.75rem 1rem; border-top:1px solid var(--color-neutral-200); display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.75rem; font-weight:600; color:var(--color-primary-700); display:flex; align-items:center; gap:6px;">
+                <span class="map-live-pulse-dot" style="width:7px; height:7px;"></span> Live Interactive Map • Zoom & Pan
+              </span>
+              <a href="contact.html#facility-map-section" style="font-size:0.75rem; font-weight:600; color:var(--color-secondary-600);">
+                Full Map & Directions →
+              </a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <span class="section-tag">Infrastructure & Coverage</span>
+          <h2 class="text-h2" style="margin-bottom:1rem;">Ready for Onsite Action: Pune, Bangalore & Nationwide</h2>
+          <p style="font-size:1rem; color:var(--color-neutral-700); line-height:1.7; margin-bottom:1.25rem;">
+            Sunrise Metrology maintains fully equipped mobile engineering teams capable of reaching manufacturing hubs across India on rapid notice.
+          </p>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.85rem; margin-bottom:1.5rem;">
+            <li style="display:flex; align-items:flex-start; gap:0.75rem;">
+              <span style="color:var(--color-secondary-500); font-weight:700;">✓</span>
+              <div>
+                <strong>Pune Operational Hub:</strong> Comprehensive metrology laboratory with desktop AutoScan Inspec2, precision granite tables, and dedicated CAD modeling suites.
+              </div>
+            </li>
+            <li style="display:flex; align-items:flex-start; gap:0.75rem;">
+              <span style="color:var(--color-secondary-500); font-weight:700;">✓</span>
+              <div>
+                <strong>Bangalore Regional Support:</strong> Rapid deployment hub servicing aerospace, electronics, and precision engineering sectors across South India.
+              </div>
+            </li>
+            <li style="display:flex; align-items:flex-start; gap:0.75rem;">
+              <span style="color:var(--color-secondary-500); font-weight:700;">✓</span>
+              <div>
+                <strong>Mobile Metrology Fleet:</strong> Portable transit cases housing Leica Laser Trackers and SIMSCAN units ready for air, train, or road transport.
+              </div>
+            </li>
+          </ul>
+          <a href="contact.html" class="btn btn-primary">Schedule an Onsite Inspection →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="cta-bg-image">
+      <img src="images/boldFuture.png" alt="" aria-hidden="true">
+    </div>
+    <div class="container cta-grid">
+      <div class="cta-text-side">
+        <span class="section-tag" style="color:var(--color-secondary-400);">Partner with Us</span>
+        <h2 class="text-display">Experience Metrology Excellence with Sunrise Metrology</h2>
+        <p>
+          Whether you need an emergency onsite laser tracker inspection or a batch of reverse-engineered CAD models, our team is ready to assist.
+        </p>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-primary btn-lg">Request a Proposal →</a>
+          <a href="services.html" class="btn btn-outline-white btn-lg">Explore Our Services</a>
+        </div>
+      </div>
+
+      <div class="cta-contact-cards">
+        <a href="tel:+919975232333" class="cta-contact-card">
+          <div class="cta-card-icon">
+            <img src="images/phone.png" alt="Phone">
+          </div>
+          <div class="cta-card-info">
+            <p>Direct Phone Line</p>
+            <p>+91 9975 232 333</p>
+          </div>
+        </a>
+
+        <a href="mailto:amol.palande@sunrisemetrology.com" class="cta-contact-card">
+          <div class="cta-card-icon">
+            <img src="images/email.png" alt="Email">
+          </div>
+          <div class="cta-card-info">
+            <p>Direct Email</p>
+            <p>amol.palande@sunrisemetrology.com</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html">
+            <img src="images/footerlogo.png" alt="Sunrise Metrology Solutions" style="max-height:60px; width:auto;">
+          </a>
+          <p>
+            Delivering accurate 3D scanning, inspection, and reverse engineering services that ensure quality, eliminate errors, and accelerate manufacturing workflows.
+          </p>
+          <div class="footer-badge-list">
+            <span class="footer-badge">ISO Compliant</span>
+            <span class="footer-badge">0.01 mm Accuracy</span>
+            <span class="footer-badge">NABL Traceable</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Company</a></li>
+            <li><a href="services.html">Metrology Services</a></li>
+            <li><a href="equipment.html">Equipment Fleet</a></li>
+            <li><a href="contact.html">Request Quotation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Instruments</h4>
+          <ul class="footer-links">
+            <li><a href="equipment.html#simscan">SIMSCAN GEN2 Scanner</a></li>
+            <li><a href="equipment.html#nimbletrack">NimbleTrack GEN2 Wireless</a></li>
+            <li><a href="equipment.html#leica">Leica Laser Trackers</a></li>
+            <li><a href="equipment.html#faro">FARO Quantum Arms</a></li>
+            <li><a href="equipment.html#autoscan">AutoScan Inspec2 Desktop</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Presence</h4>
+          <p style="font-size:0.875rem; color:var(--color-neutral-600); margin-bottom:0.5rem;">
+            Head Office: <strong>Pune, Maharashtra</strong><br>
+            Regional Support: <strong>Bengaluru, Karnataka</strong><br>
+            Onsite Deployment: <strong>Pan-India</strong>
+          </p>
+          <div class="footer-map-thumb">
+            <iframe width="100%" height="125" style="border:0;" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=73.65%2C18.45%2C74.05%2C18.68&amp;layer=mapnik&amp;marker=18.5204%2C73.8567"></iframe>
+          </div>
+          <a href="https://www.google.com/maps/search/?api=1&query=Sunrise+Metrology+Pune" target="_blank" rel="noopener" class="footer-map-link">
+            <span>📍 Open in Google Maps</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2026 Sunrise Metrology Solutions Pvt. Ltd. All Rights Reserved.</p>
+        <div class="developer-badge">
+          <span>Accuracy That Drives Quality</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Call & WhatsApp Action Dock -->
+  <div class="floating-contact-dock" id="floatingContactDock" role="region" aria-label="Floating quick contact options">
+    <a href="tel:+919975232333" class="floating-dock-btn floating-call-btn" title="Call Sunrise Metrology Directly" aria-label="Call +91 9975 232 333">
+      <div class="floating-btn-icon">
+        <span class="floating-pulse-ring"></span>
+        <svg viewBox="0 0 24 24" width="20" height="20">
+          <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+      </div>
+      <div class="floating-btn-text">
+        <span class="floating-btn-sub">Direct Call</span>
+        <span class="floating-btn-main">+91 9975 232 333</span>
+      </div>
+    </a>
+    <a href="https://wa.me/919975232333?text=Hello%20Sunrise%20Metrology,%20I%20would%20like%20to%20inquire%20about%20your%203D%20scanning%20and%20inspection%20services." 
+       target="_blank" rel="noopener noreferrer" class="floating-dock-btn floating-whatsapp-btn" title="Chat with us on WhatsApp" aria-label="Chat on WhatsApp">
+      <div class="floating-btn-icon">
+        <span class="floating-pulse-ring" style="border-color:rgba(37,211,102,0.7);"></span>
+        <svg viewBox="0 0 24 24" width="22" height="22">
+          <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.82 14.04c-.24.68-1.2 1.26-1.78 1.34-.52.08-1.2.14-3.52-.79-2.97-1.19-4.88-4.22-5.03-4.41-.15-.2-1.21-1.61-1.21-3.07 0-1.46.76-2.18 1.03-2.48.27-.3.59-.37.79-.37.2 0 .4 0 .58.01.19.01.44-.07.69.53.25.6.86 2.1.94 2.25.08.16.14.34.03.55-.1.21-.15.34-.3.51-.15.17-.32.38-.46.51-.15.15-.31.31-.13.62.18.31.79 1.3 1.7 2.11 1.17 1.04 2.15 1.36 2.46 1.51.31.15.49.13.67-.08.18-.21.79-.92 1-1.23.21-.31.42-.26.71-.15.29.11 1.84.87 2.16 1.03.32.16.53.24.61.37.08.14.08.8-.16 1.48z"/>
+        </svg>
+      </div>
+      <div class="floating-btn-text">
+        <span class="floating-btn-sub">Chat Live</span>
+        <span class="floating-btn-main">WhatsApp Us</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/leaflet.js"></script>
+  <script src="js/realmap.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>

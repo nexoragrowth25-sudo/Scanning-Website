@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us & Project RFQ | Sunrise Metrology Solutions | Pune & Bengaluru</title>
+  <meta name="description" content="Contact Sunrise Metrology Solutions for 3D laser scanning, Leica laser tracker inspection, CMM verification, and reverse engineering in Pune and Bengaluru. Call +91 9975 232 333.">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/leaflet.css">
+</head>
+<body>
+
+  <!-- Main Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Sunrise Metrology Homepage">
+        <img src="images/logo-primary.svg" alt="Sunrise Metrology Solutions" width="290" height="70">
+      </a>
+      <!-- Desktop Nav (Original Page Names Preserved) -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="equipment.html" class="nav-link">Equipment &amp; Technology</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:+919975232333" class="nav-phone-link" aria-label="Call +91 9975 232 333">
+          <span>Call Us: +91 9975 232 333</span>
+        </a>
+        <a href="#rfq-section" class="btn-get-in-touch">
+          <span>Get In Touch</span>
+          <span class="btn-arrow">↗</span>
+        </a>
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <img src="images/logo-primary.svg" alt="Sunrise Metrology" style="max-height:42px; width:auto;">
+      <button class="drawer-close" id="drawerClose">&times;</button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="index.html" class="drawer-link">Home</a></li>
+      <li><a href="about.html" class="drawer-link">About Us</a></li>
+      <li><a href="services.html" class="drawer-link">Services</a></li>
+      <li><a href="equipment.html" class="drawer-link">Equipment &amp; Technology</a></li>
+      <li><a href="contact.html" class="drawer-link active">Contact Us</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <a href="tel:+919975232333" class="btn btn-primary" style="width:100%;">Call +91 9975 232 333</a>
+      <a href="mailto:amol.palande@sunrisemetrology.com" class="btn btn-blue" style="width:100%;">Get In Touch ↗</a>
+    </div>
+  </aside>
+
+  <!-- Page Hero (Reference Layout with Original Data) -->
+  <section class="page-hero-ref-section">
+    <div class="container">
+      <div class="hero-ref-grid">
+        <div class="hero-ref-left">
+          <div class="hero-ref-tag">
+            <span class="ref-bar">|</span>
+            <span class="ref-tag-text">Pan-India Onsite Deployment · Pune &amp; Bengaluru</span>
+            <span class="ref-flag">🇮🇳</span>
+          </div>
+          <!-- Hero Main Title (Original Data Preserved) -->
+          <h1 class="hero-ref-title">
+            <span class="title-highlight">Get In Touch</span>
+            <span class="title-dark">with Our Metrology</span>
+            <span class="title-dark">Engineers</span>
+          </h1>
+          <!-- Hero Subtitle (Original Data Preserved) -->
+          <p class="hero-ref-desc">
+            Reach out to discuss your dimensional inspection workflow, equipment suitability, or onsite scanning requirements across Pune, Bangalore, and nationwide.
+          </p>
+          <div class="hero-ref-actions">
+            <a href="#rfq-section" class="btn-get-in-touch" style="font-size:1rem; padding:0.75rem 1.75rem;">
+              <span>Request Quotation</span>
+              <span class="btn-arrow">↗</span>
+            </a>
+            <a href="tel:+919975232333" class="btn-ref-phone">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span>Call Us: +91 9975 232 333</span>
+            </a>
+          </div>
+          <div class="hero-ref-breadcrumb">
+            <a href="index.html">Home</a> &nbsp;/&nbsp; <span>Contact Us</span>
+          </div>
+        </div>
+
+        <div class="hero-ref-right">
+          <div class="hero-diamond-shape">
+            <img src="images/SIogo.png" alt="" class="hero-diamond-logo" aria-hidden="true">
+          </div>
+          <img src="images/HeroSection22.png" alt="FARO 8-Axis Rapid Measurement Arm" class="hero-machinery-img" style="max-height:480px; object-fit:contain;" loading="eager">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 Primary Communication Channels (Cards Grid) -->
+  <section class="section section-bg-light" style="padding-top:0; padding-bottom:3rem;">
+    <div class="container">
+      <div class="contact-channels-grid">
+        
+        <!-- Channel 1: Phone & WhatsApp -->
+        <div class="channel-card">
+          <div class="channel-card-header">
+            <div class="channel-icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <span class="channel-badge active-green">
+              <span class="map-live-pulse-dot" style="width:7px; height:7px;"></span> Live Support
+            </span>
+          </div>
+          <h3>Technical Hotline & WhatsApp</h3>
+          <p class="channel-desc">
+            Direct line to managing director Amol Palande and dispatch team for urgent onsite consultations and scheduling.
+          </p>
+          <div class="channel-val">+91 9975 232 333</div>
+          <div class="channel-actions">
+            <a href="tel:+919975232333" class="btn btn-primary btn-sm" style="flex:1; justify-content:center;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span>Call Now</span>
+            </a>
+            <a href="https://wa.me/919975232333?text=Hello%20Sunrise%20Metrology,%20I%20have%20an%20inquiry%20regarding%203D%20scanning%20services." target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm" style="flex:1; justify-content:center;">
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Channel 2: Official Engineering Email -->
+        <div class="channel-card">
+          <div class="channel-card-header">
+            <div class="channel-icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <span class="channel-badge active-blue">
+              <span>SLA: &lt; 3 Hours</span>
+            </span>
+          </div>
+          <h3>Official Quotation & RFQ Email</h3>
+          <p class="channel-desc">
+            Send 2D/3D CAD models, drawing requirements, or corporate vendor registration documents directly to engineering.
+          </p>
+          <div class="channel-val" style="font-size:0.95rem; word-break:break-all;">amol.palande@sunrisemetrology.com</div>
+          <div class="channel-actions">
+            <a href="mailto:amol.palande@sunrisemetrology.com" class="btn btn-primary btn-sm" style="width:100%; justify-content:center;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>Send Direct Email</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Channel 3: Operating Hubs & Precision Labs -->
+        <div class="channel-card">
+          <div class="channel-card-header">
+            <div class="channel-icon-wrap">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <span class="channel-badge active-orange">
+              <span>Pune & Bengaluru</span>
+            </span>
+          </div>
+          <h3>Operational Facilities</h3>
+          <p class="channel-desc">
+            Equipped precision metrology laboratory in Pune and aerospace support center in Bengaluru for rapid Pan-India deployment.
+          </p>
+          <div class="channel-val" style="font-size:0.95rem;">Maharashtra & Karnataka</div>
+          <div class="channel-actions">
+            <a href="#facility-map-section" class="btn btn-outline-primary btn-sm" style="width:100%; justify-content:center;">
+              <span>View Map & Facilities ↓</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Section: RFQ Builder & Operations Information (2-Col Split) -->
+  <section class="section section-bg-white" id="rfq-section">
+    <div class="container">
+      <div style="display:grid; grid-template-columns: 1fr; gap:3rem;" class="lg-grid-2">
+        
+        <!-- Left: Industrial RFQ & Project Specification Form -->
+        <div>
+          <div class="rfq-box">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:0.5rem;">
+              <span class="section-tag" style="margin-bottom:0;">Project RFQ Form</span>
+              <span style="font-size:0.75rem; font-weight:700; color:var(--color-primary-700); background:var(--color-primary-100); padding:2px 8px; border-radius:99px;">
+                Quotation SLA: &lt; 4 Hours
+              </span>
+            </div>
+            <h2 class="text-h2" style="font-size:1.75rem; margin-bottom:0.5rem;">Request a Technical Quotation</h2>
+            <p style="color:var(--color-neutral-600); font-size:0.925rem; margin-bottom:1.5rem; line-height:1.6;">
+              Please provide your component specifications and inspection parameters. Our senior metrology engineers will review your scope and return a formal cost and schedule proposal.
+            </p>
+
+            <form id="mainRfqForm">
+              
+              <!-- Step 1: Client & Company Information -->
+              <div class="form-step-title">
+                <span class="step-num">1</span>
+                <span>Client & Organization Information</span>
+              </div>
+              <div class="form-row two-col">
+                <div class="form-group">
+                  <label for="rfqName">Full Name *</label>
+                  <input type="text" id="rfqName" class="form-control" placeholder="e.g. Rahul Sharma" required>
+                </div>
+                <div class="form-group">
+                  <label for="rfqCompany">Company / Organization *</label>
+                  <input type="text" id="rfqCompany" class="form-control" placeholder="e.g. Tata Motors / Mahindra / HAL" required>
+                </div>
+              </div>
+
+              <div class="form-row two-col">
+                <div class="form-group">
+                  <label for="rfqEmail">Work Email Address *</label>
+                  <input type="email" id="rfqEmail" class="form-control" placeholder="name@company.com" required>
+                </div>
+                <div class="form-group">
+                  <label for="rfqPhone">Direct Contact Number *</label>
+                  <input type="tel" id="rfqPhone" class="form-control" placeholder="+91 98765 43210" required>
+                </div>
+              </div>
+
+              <!-- Step 2: Metrology & Scope Parameters -->
+              <div class="form-step-title">
+                <span class="step-num">2</span>
+                <span>Technical Requirements & Inspection Scope</span>
+              </div>
+              <div class="form-row two-col">
+                <div class="form-group">
+                  <label for="rfqService">Primary Service Required *</label>
+                  <select id="rfqService" class="form-control">
+                    <option value="3d-scanning">Onsite 3D Optical Scanning (SIMSCAN / NimbleTrack)</option>
+                    <option value="laser-tracker">Leica Laser Tracker Inspection (&gt;3m Large Fixtures)</option>
+                    <option value="faro-arm">CMM &amp; FARO Arm Precision Verification</option>
+                    <option value="desktop-scan">AutoScan Inspec2 Desktop Lab Scan (0.010 mm)</option>
+                    <option value="reverse-engineering">Parametric CAD Reverse Engineering</option>
+                    <option value="gdt-reports">Full GD&amp;T Inspection &amp; 3D Color Deviation Map</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="rfqDimensions">Component Dimensions (Approx.)</label>
+                  <input type="text" id="rfqDimensions" class="form-control" placeholder="e.g. 850 × 420 × 280 mm (or &gt;3 meters)">
+                </div>
+              </div>
+
+              <div class="form-row two-col">
+                <div class="form-group">
+                  <label for="rfqMaterial">Part Material &amp; Surface Finish</label>
+                  <input type="text" id="rfqMaterial" class="form-control" placeholder="e.g. Machined Steel, Aluminum Casting, Plastic">
+                </div>
+                <div class="form-group">
+                  <label for="rfqTolerance">Target Accuracy / Tolerance</label>
+                  <input type="text" id="rfqTolerance" class="form-control" placeholder="e.g. ±0.020 mm (20 microns)">
+                </div>
+              </div>
+
+              <!-- Step 3: Location, Deliverables & Timeline -->
+              <div class="form-step-title">
+                <span class="step-num">3</span>
+                <span>Location, Deliverables &amp; Urgency</span>
+              </div>
+              <div class="form-row two-col">
+                <div class="form-group">
+                  <label for="rfqLocation">Project Location *</label>
+                  <select id="rfqLocation" class="form-control">
+                    <option value="pune">Pune &amp; Chakan Industrial Corridor (Onsite)</option>
+                    <option value="bangalore">Bengaluru &amp; Karnataka Tech Hub (Onsite)</option>
+                    <option value="maharashtra">Rest of Maharashtra (Nashik, Aurangabad, etc.)</option>
+                    <option value="pan-india">Pan-India Onsite Deployment (Major Hubs)</option>
+                    <option value="lab">Ship Component to Sunrise Metrology Pune Lab</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="rfqDeliverable">Preferred Output Deliverable</label>
+                  <select id="rfqDeliverable" class="form-control">
+                    <option value="step">Universal STEP (.stp) / IGES (.igs) CAD</option>
+                    <option value="solidworks">Native Parametric SolidWorks (.sldprt)</option>
+                    <option value="catia">Native CATIA V5 (.CATPart)</option>
+                    <option value="stl">Watertight STL Mesh (3D Printing / CAE)</option>
+                    <option value="pdf">Full GD&amp;T Color Map Inspection Report (PDF)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom:1.25rem;">
+                <label for="rfqDescription">Component Details &amp; Specific Scope *</label>
+                <textarea id="rfqDescription" class="form-control" placeholder="Describe the component, quantity of parts, whether CAD model exists for comparison, fixture constraints, and inspection urgency." required></textarea>
+              </div>
+
+              <!-- NDA Security Box -->
+              <div class="nda-trust-strip">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                <span><strong>Mutual NDA Guarantee:</strong> All 3D scans, CAD drawings, and inspection reports are kept strictly confidential under legally binding NDA agreements.</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-lg" style="width:100%; margin-top:1.25rem;">
+                <span>Submit Technical RFQ →</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Right: Rapid Assistance & Deployment SLA Matrix -->
+        <div>
+          <span class="section-tag">Direct Assistance</span>
+          <h2 class="text-h2" style="font-size:1.75rem; margin-bottom:1rem;">Metrology Rapid Response</h2>
+          <p style="color:var(--color-neutral-700); font-size:0.95rem; line-height:1.65; margin-bottom:1.5rem;">
+            Need immediate advice on part feasibility, GD&amp;T tolerance evaluation, or urgent shutdown inspection? Speak directly with our metrology engineering leadership.
+          </p>
+
+          <!-- Direct Phone & WhatsApp Card -->
+          <div class="hub-detail-card" style="border-left: 4px solid var(--color-primary-600); margin-bottom:1.5rem;">
+            <div class="hub-header">
+              <h4>Engineering Hotline</h4>
+              <span class="hub-badge pune-badge">Instant Support</span>
+            </div>
+            <p style="font-size:0.9rem; color:var(--color-neutral-700); margin-bottom:0.85rem; line-height:1.5;">
+              Call or WhatsApp Mr. Amol Palande (Founder &amp; Principal Metrologist) for instantaneous technical guidance and quotation turnaround.
+            </p>
+            <div style="display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.85rem;">
+              <a href="tel:+919975232333" class="btn btn-sm btn-primary" style="flex:1; min-width:160px; justify-content:center; gap:6px;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span>+91 9975 232 333</span>
+              </a>
+              <a href="https://wa.me/919975232333?text=Hello%20Sunrise%20Metrology%2C%20I%20would%20like%20to%20request%20a%20technical%20quote%20for%203D%20scanning%20services." target="_blank" rel="noopener" class="btn btn-sm" style="flex:1; min-width:160px; justify-content:center; gap:6px; background:#25d366; color:#ffffff; border-color:#25d366;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+                <span>WhatsApp Quote</span>
+              </a>
+            </div>
+            <div style="font-size:0.825rem; color:var(--color-neutral-600); display:flex; align-items:center; gap:6px;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>Email: amol.palande@sunrisemetrology.com</span>
+            </div>
+          </div>
+
+          <!-- Onsite Deployment SLA Matrix -->
+          <div class="sla-matrix-card">
+            <h4>Onsite Deployment Timeline SLAs</h4>
+            <p>Guaranteed rapid response times for manufacturing plants across key industrial corridors:</p>
+            <div class="sla-row">
+              <span class="sla-dest">🏭 Pune / Chakan / Bhosari MIDC</span>
+              <span class="sla-time">12 – 24 Hours</span>
+            </div>
+            <div class="sla-row">
+              <span class="sla-dest">🚀 Bengaluru / Peenya / Whitefield</span>
+              <span class="sla-time">12 – 24 Hours</span>
+            </div>
+            <div class="sla-row">
+              <span class="sla-dest">🇮🇳 Pan-India Industrial Corridors</span>
+              <span class="sla-time">24 – 48 Hours</span>
+            </div>
+            <div class="sla-row">
+              <span class="sla-dest">🚨 Critical Assembly Line Shutdown</span>
+              <span class="sla-time">Immediate 24/7 Dispatch</span>
+            </div>
+          </div>
+
+          <!-- RFQ Preparation Checklist -->
+          <div class="rfq-checklist-box">
+            <h5>📋 For Fastest Quotation Turnaround:</h5>
+            <ul>
+              <li><span>✓</span> Component CAD model (STEP/IGES) or clear part photos with dimensions.</li>
+              <li><span>✓</span> Specific inspection drawing with critical GD&amp;T datum references.</li>
+              <li><span>✓</span> Total part quantities and inspection location (onsite vs. laboratory).</li>
+              <li><span>✓</span> Project deadline or scheduled shutdown maintenance window.</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Simple Facility & Location Map Section: Pune & Bengaluru -->
+  <section class="section section-bg-light" id="facility-map-section" style="padding-top:2.5rem; padding-bottom:3.5rem;">
+    <div class="container">
+      <div class="section-header" style="max-width:760px; margin-bottom:2rem;">
+        <span class="section-tag">Facility Locations</span>
+        <h2 class="text-h2 section-title">Our Facilities in Pune &amp; Bengaluru</h2>
+        <p class="section-desc">
+          Click either facility card below to inspect its exact location on the live map, review equipment capabilities, or get instant driving directions.
+        </p>
+      </div>
+
+      <!-- Simple 2-Card Facility Selector -->
+      <div class="simple-facility-grid">
+        <!-- Facility 1: Pune -->
+        <div class="simple-facility-card" data-map-city="pune" role="button" tabindex="0" aria-label="Select Pune Head Office on map">
+          <div class="facility-card-top">
+            <span class="facility-badge pune">Head Office &amp; Central Lab</span>
+            <span class="facility-active-indicator">
+              <span class="map-live-pulse-dot" style="width:8px; height:8px; box-shadow:none;"></span>
+              Pune HQ
+            </span>
+          </div>
+          <h3 class="facility-card-title">🏢 Pune Inspection &amp; Metrology Center</h3>
+          <p class="facility-card-address">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>Pimpri-Chinchwad / Chakan Industrial Corridor, Pune, Maharashtra 411019, India</span>
+          </p>
+          <div class="facility-card-contact">
+            <div><strong>Direct:</strong> +91 9975 232 333 &nbsp;|&nbsp; amol.palande@sunrisemetrology.com</div>
+            <div><strong>Operating Hours:</strong> Mon – Sat, 8:30 AM – 7:30 PM (24/7 Emergency Dispatch)</div>
+          </div>
+          <div class="facility-card-capabilities">
+            <span class="cap-pill">AutoScan Inspec2 Lab</span>
+            <span class="cap-pill">Grade-00 Granite Tables</span>
+            <span class="cap-pill">FARO Arm Station</span>
+            <span class="cap-pill">Parametric CAD Modeling</span>
+          </div>
+          <div class="facility-card-actions">
+            <span class="btn-select-map">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+              Focus on Map
+            </span>
+            <a href="https://www.google.com/maps/search/?api=1&query=Sunrise+Metrology+Pune+Maharashtra" target="_blank" rel="noopener" class="btn-gmaps" onclick="event.stopPropagation();">
+              <span>Directions via Google Maps</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Facility 2: Bengaluru -->
+        <div class="simple-facility-card" data-map-city="bangalore" role="button" tabindex="0" aria-label="Select Bengaluru Regional Hub on map">
+          <div class="facility-card-top">
+            <span class="facility-badge blr">Regional Support Hub</span>
+            <span class="facility-active-indicator">
+              <span class="map-live-pulse-dot" style="width:8px; height:8px; box-shadow:none; background:#fe6911;"></span>
+              Bengaluru Hub
+            </span>
+          </div>
+          <h3 class="facility-card-title">🚀 Bengaluru Aerospace &amp; Defense Hub</h3>
+          <p class="facility-card-address">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span>Peenya / Whitefield Aerospace Corridor, Bengaluru, Karnataka 560058, India</span>
+          </p>
+          <div class="facility-card-contact">
+            <div><strong>Direct:</strong> +91 9975 232 333 &nbsp;|&nbsp; amol.palande@sunrisemetrology.com</div>
+            <div><strong>Operating Hours:</strong> Mon – Sat, 8:30 AM – 7:00 PM (Aviation Rapid Dispatch)</div>
+          </div>
+          <div class="facility-card-capabilities">
+            <span class="cap-pill">Leica 80m Laser Tracker</span>
+            <span class="cap-pill">NimbleTrack Wireless Scanner</span>
+            <span class="cap-pill">Aerospace Tooling Verification</span>
+            <span class="cap-pill">Jig &amp; Fixture Alignment</span>
+          </div>
+          <div class="facility-card-actions">
+            <span class="btn-select-map">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+              Focus on Map
+            </span>
+            <a href="https://www.google.com/maps/search/?api=1&query=Sunrise+Metrology+Bengaluru+Karnataka" target="_blank" rel="noopener" class="btn-gmaps" onclick="event.stopPropagation();">
+              <span>Directions via Google Maps</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Clean Map Toolbar -->
+      <div class="simple-map-toolbar">
+        <div style="display:flex; align-items:center; gap:8px;">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary-600)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+          <span style="font-weight:600; color:var(--color-neutral-800);">Real Interactive Map</span>
+          <span style="color:var(--color-neutral-500); font-size:0.8rem;">(Showing Pune &amp; Bengaluru Facilities)</span>
+        </div>
+        <button type="button" class="btn-view-both active" data-map-city="both" aria-label="Default regular view showing both Pune and Bengaluru on map">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
+          <span>Regular View (Both Locations)</span>
+        </button>
+      </div>
+      </div>
+
+      <!-- Unobstructed Map Box -->
+      <div class="simple-map-box">
+        <div id="contact-main-map" class="simple-map-canvas"></div>
+      </div>
+
+      <!-- Clean Footer Dispatch Note -->
+      <div class="simple-map-footer-note">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+        <span>
+          <strong>Onsite Plant Dispatch:</strong> In addition to our laboratory services in Pune &amp; Bengaluru, our certified metrologists deploy portable 3D scanners, FARO arms, and laser trackers directly to your manufacturing plant anywhere in India within 12–24 hours.
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comprehensive Technical FAQ Section -->
+  <section class="section section-bg-white">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Technical Inquiries</span>
+        <h2 class="text-h2 section-title">Frequently Asked Questions</h2>
+        <p class="section-desc">
+          Detailed answers regarding quotation procedures, onsite deployment logistics, data confidentiality, and CAD deliverables.
+        </p>
+      </div>
+
+      <div style="max-width:850px; margin:0 auto;" class="faq-accordion">
+        
+        <!-- FAQ 1 -->
+        <div class="faq-item open">
+          <button class="faq-question">
+            <span>How fast can Sunrise Metrology deploy an engineering team onsite?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            For manufacturing hubs in Pune (Chakan, Bhosari, Talegaon, Ranjangaon) and Bengaluru (Peenya, Whitefield, Bommasandra), we can mobilize our portable scanning team within <strong>12 to 24 hours</strong>. For other Pan-India industrial corridors (Chennai, Delhi NCR, Ahmedabad, Hyderabad), deployment is scheduled within <strong>24 to 48 hours</strong> depending on transit logistics. In emergency assembly line stoppages, 24/7 on-call dispatch is available.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What do you require from our facility to begin onsite measurement?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            Our portable equipment (SIMSCAN GEN2 and NimbleTrack) is self-contained. We only require a stable floor workspace, a standard single-phase 230V AC power socket, and clear physical access around the part or tool. For Leica Laser Tracker measurements on fixtures exceeding 5 meters, minimizing severe ground vibration and direct thermal draft currents helps achieve optimal micron-level repeatability.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Do you execute Non-Disclosure Agreements (NDA) before reviewing CAD files?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            Yes, absolutely. Intellectual Property security is a core foundation of our service. We routinely execute binding mutual NDAs with automotive OEMs, aerospace contractors, and tooling manufacturers prior to receiving proprietary 3D CAD models, 2D drawings, or physical sample components. All data is processed on air-gapped secure workstations.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>What software platforms and CAD formats do you deliver for Reverse Engineering?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            We deliver fully editable parametric feature-tree models in native <strong>SolidWorks (.sldprt)</strong>, <strong>CATIA V5 (.CATPart)</strong>, and <strong>Siemens NX</strong>, as well as industry-standard neutral formats including <strong>STEP (.stp)</strong>, <strong>IGES (.igs)</strong>, and <strong>Parasolid (.x_t)</strong>. For 3D printing and CFD/FEA analysis, we provide watertight polygonal STL/OBJ meshes.
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Are your measurement results and inspection reports ISO &amp; NABL traceable?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            Yes. Every measurement instrument in our fleet—including our Leica Laser Trackers, SIMSCAN optical heads, and FARO coordinate arms—carries valid ISO 17025 / NABL traceable annual calibration certificates. Every inspection report includes instrument serial numbers, calibration validity dates, ambient temperature compensation logs, and volumetric uncertainty statements.
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item">
+          <button class="faq-question">
+            <span>Can we send sample components directly to your Pune laboratory?</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            Yes. Clients frequently courier or transport precision components directly to our Pune laboratory. Our temperature-controlled facility features high-resolution desktop scanning (AutoScan Inspec2 down to 0.010 mm) and precision granite surface plates. We inspect and return components with full documentation via insured logistics.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Emergency Hotline CTA Banner -->
+  <section class="cta-banner">
+    <div class="cta-bg-image">
+      <img src="images/boldFuture.png" alt="" aria-hidden="true">
+    </div>
+    <div class="container cta-grid">
+      <div class="cta-text-side">
+        <span class="section-tag" style="color:var(--color-secondary-400);">24/7 OEM Emergency Hotline</span>
+        <h2 class="text-display">Facing an Assembly Line Stoppage or Critical Audit?</h2>
+        <p>
+          Speak directly with founder Amol Palande to initiate immediate mobilization of our mobile scanning and laser tracker teams across India.
+        </p>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.5rem;">
+          <a href="tel:+919975232333" class="btn btn-primary btn-lg">Call +91 9975 232 333 →</a>
+          <a href="mailto:amol.palande@sunrisemetrology.com" class="btn btn-outline-white btn-lg">Email amol.palande@sunrisemetrology.com</a>
+        </div>
+      </div>
+
+      <div class="cta-contact-cards">
+        <a href="tel:+919975232333" class="cta-contact-card">
+          <div class="cta-card-icon">
+            <img src="images/phone.png" alt="Phone">
+          </div>
+          <div class="cta-card-info">
+            <p>Direct Engineering Hotline</p>
+            <p>+91 9975 232 333</p>
+          </div>
+        </a>
+
+        <a href="mailto:amol.palande@sunrisemetrology.com" class="cta-contact-card">
+          <div class="cta-card-icon">
+            <img src="images/email.png" alt="Email">
+          </div>
+          <div class="cta-card-info">
+            <p>Direct Founder Inquiries</p>
+            <p>amol.palande@sunrisemetrology.com</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Success Modal for RFQ Submission -->
+  <div class="modal-overlay" id="rfqSuccessModal">
+    <div class="modal-content">
+      <div class="modal-icon">✓</div>
+      <h3 style="font-size:1.5rem; margin-bottom:0.75rem; color:var(--color-neutral-950);">RFQ Successfully Received</h3>
+      <p style="font-size:0.95rem; color:var(--color-neutral-600); line-height:1.6; margin-bottom:1.5rem;">
+        Thank you for submitting your technical inquiry. Our engineering team has received your parameters and will respond with a formal quotation within <strong>2 to 4 business hours</strong>.
+      </p>
+      <button type="button" class="btn btn-primary" id="modalCloseBtn" style="width:100%;">Close Confirmation</button>
+    </div>
+  </div>
+
+  <!-- Standard Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html">
+            <img src="images/footerlogo.png" alt="Sunrise Metrology Solutions" style="max-height:60px; width:auto;">
+          </a>
+          <p>
+            Delivering accurate 3D scanning, inspection, and reverse engineering services that ensure quality, eliminate errors, and accelerate manufacturing workflows.
+          </p>
+          <div class="footer-badge-list">
+            <span class="footer-badge">ISO Compliant</span>
+            <span class="footer-badge">0.01 mm Accuracy</span>
+            <span class="footer-badge">NABL Traceable</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Company</a></li>
+            <li><a href="services.html">Metrology Services</a></li>
+            <li><a href="equipment.html">Equipment Fleet</a></li>
+            <li><a href="contact.html">Request Quotation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Instruments</h4>
+          <ul class="footer-links">
+            <li><a href="equipment.html#simscan">SIMSCAN GEN2 Scanner</a></li>
+            <li><a href="equipment.html#nimbletrack">NimbleTrack GEN2 Wireless</a></li>
+            <li><a href="equipment.html#leica">Leica Laser Trackers</a></li>
+            <li><a href="equipment.html#faro">FARO Quantum Arms</a></li>
+            <li><a href="equipment.html#autoscan">AutoScan Inspec2 Desktop</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Presence</h4>
+          <p style="font-size:0.875rem; color:var(--color-neutral-600); margin-bottom:0.5rem;">
+            Head Office: <strong>Pune, Maharashtra</strong><br>
+            Regional Support: <strong>Bengaluru, Karnataka</strong><br>
+            Onsite Deployment: <strong>Pan-India</strong>
+          </p>
+          <div class="footer-map-thumb">
+            <iframe width="100%" height="125" style="border:0;" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=73.65%2C18.45%2C74.05%2C18.68&amp;layer=mapnik&amp;marker=18.5204%2C73.8567"></iframe>
+          </div>
+          <a href="https://www.google.com/maps/search/?api=1&query=Sunrise+Metrology+Pune" target="_blank" rel="noopener" class="footer-map-link">
+            <span>📍 Open in Google Maps</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2026 Sunrise Metrology Solutions Pvt. Ltd. All Rights Reserved.</p>
+        <div class="developer-badge">
+          <span>Accuracy That Drives Quality</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Call & WhatsApp Action Dock -->
+  <div class="floating-contact-dock" id="floatingContactDock" role="region" aria-label="Floating quick contact options">
+    <a href="tel:+919975232333" class="floating-dock-btn floating-call-btn" title="Call Sunrise Metrology Directly" aria-label="Call +91 9975 232 333">
+      <div class="floating-btn-icon">
+        <span class="floating-pulse-ring"></span>
+        <svg viewBox="0 0 24 24" width="20" height="20">
+          <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+      </div>
+      <div class="floating-btn-text">
+        <span class="floating-btn-sub">Direct Call</span>
+        <span class="floating-btn-main">+91 9975 232 333</span>
+      </div>
+    </a>
+    <a href="https://wa.me/919975232333?text=Hello%20Sunrise%20Metrology,%20I%20would%20like%20to%20inquire%20about%20your%203D%20scanning%20and%20inspection%20services." 
+       target="_blank" rel="noopener noreferrer" class="floating-dock-btn floating-whatsapp-btn" title="Chat with us on WhatsApp" aria-label="Chat on WhatsApp">
+      <div class="floating-btn-icon">
+        <span class="floating-pulse-ring" style="border-color:rgba(37,211,102,0.7);"></span>
+        <svg viewBox="0 0 24 24" width="22" height="22">
+          <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.82 14.04c-.24.68-1.2 1.26-1.78 1.34-.52.08-1.2.14-3.52-.79-2.97-1.19-4.88-4.22-5.03-4.41-.15-.2-1.21-1.61-1.21-3.07 0-1.46.76-2.18 1.03-2.48.27-.3.59-.37.79-.37.2 0 .4 0 .58.01.19.01.44-.07.69.53.25.6.86 2.1.94 2.25.08.16.14.34.03.55-.1.21-.15.34-.3.51-.15.17-.32.38-.46.51-.15.15-.31.31-.13.62.18.31.79 1.3 1.7 2.11 1.17 1.04 2.15 1.36 2.46 1.51.31.15.49.13.67-.08.18-.21.79-.92 1-1.23.21-.31.42-.26.71-.15.29.11 1.84.87 2.16 1.03.32.16.53.24.61.37.08.14.08.8-.16 1.48z"/>
+        </svg>
+      </div>
+      <div class="floating-btn-text">
+        <span class="floating-btn-sub">Chat Live</span>
+        <span class="floating-btn-main">WhatsApp Us</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/leaflet.js"></script>
+  <script src="js/realmap.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>

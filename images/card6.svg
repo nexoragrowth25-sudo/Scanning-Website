@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-labelledby="desktopScannerChipIconTitle">
+  <title id="desktopScannerChipIconTitle">Desktop 3D scanner icon</title>
+  <path
+    d="M14 40V12a3 3 0 013-3h19a2 2 0 012 2v6a2 2 0 01-2 2H20v21"
+    fill="none"
+    stroke="#184762"
+    stroke-width="2.4"
+    stroke-linejoin="round"
+  />
+  <rect x="9" y="37" width="30" height="5" rx="1.5" fill="none" stroke="#184762" stroke-width="2.4" stroke-linejoin="round" />
+  <circle cx="30" cy="14" r="1.6" fill="#fe6911" />
+  <path d="M30 19l-4 9M30 19l4 9" fill="none" stroke="#fe6911" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="2 2.5" />
+  <rect x="24" y="29" width="12" height="4" rx="1" fill="none" stroke="#fe6911" stroke-width="2.2" />
+</svg>

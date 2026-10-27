@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Equipment & Technology | SIMSCAN, Leica Tracker & FARO Arm | Sunrise Metrology</title>
+  <meta name="description" content="Explore Sunrise Metrology's world-class equipment fleet: SIMSCAN GEN2, NimbleTrack GEN2, Leica Laser Tracker, FARO Arms, and AutoScan Inspec2 desktop scanner.">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Sunrise Metrology Homepage">
+        <img src="images/logo-primary.svg" alt="Sunrise Metrology Solutions" width="290" height="70">
+      </a>
+      <nav aria-label="Main Navigation">
+        <!-- Desktop Nav (Original Page Names Preserved) -->
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="equipment.html" class="nav-link active">Equipment &amp; Technology</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:+919975232333" class="nav-phone-link" aria-label="Call +91 9975 232 333">
+          <span>Call Us: +91 9975 232 333</span>
+        </a>
+        <a href="contact.html" class="btn-get-in-touch">
+          <span>Get In Touch</span>
+          <span class="btn-arrow">↗</span>
+        </a>
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <img src="images/logo-primary.svg" alt="Sunrise Metrology" style="max-height:42px; width:auto;">
+      <button class="drawer-close" id="drawerClose">&times;</button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="index.html" class="drawer-link">Home</a></li>
+      <li><a href="about.html" class="drawer-link">About Us</a></li>
+      <li><a href="services.html" class="drawer-link">Services</a></li>
+      <li><a href="equipment.html" class="drawer-link active">Equipment &amp; Technology</a></li>
+      <li><a href="contact.html" class="drawer-link">Contact Us</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <a href="tel:+919975232333" class="btn btn-primary" style="width:100%;">Call +91 9975 232 333</a>
+      <a href="contact.html" class="btn btn-blue" style="width:100%;">Get In Touch ↗</a>
+    </div>
+  </aside>
+
+  <!-- Page Hero (Reference Layout with Original Data) -->
+  <section class="page-hero-ref-section">
+    <div class="container">
+      <div class="hero-ref-grid">
+        <div class="hero-ref-left">
+          <div class="hero-ref-tag">
+            <span class="ref-bar">|</span>
+            <span class="ref-tag-text">World-Class Metrology Fleet · ISO Calibrated</span>
+            <span class="ref-flag">🇮🇳</span>
+          </div>
+          <!-- Hero Main Title (Original Data Preserved) -->
+          <h1 class="hero-ref-title">
+            <span class="title-highlight">Metrology Hardware</span>
+            <span class="title-dark">&amp; Scanning Technology</span>
+            <span class="title-dark">Fleet</span>
+          </h1>
+          <!-- Hero Subtitle (Original Data Preserved) -->
+          <p class="hero-ref-desc">
+            Equipped with globally certified 3D optical scanners, laser trackers, coordinate measuring arms, and industry-standard metrology software.
+          </p>
+          <div class="hero-ref-actions">
+            <a href="contact.html" class="btn-get-in-touch" style="font-size:1rem; padding:0.75rem 1.75rem;">
+              <span>Schedule Equipment Demo</span>
+              <span class="btn-arrow">↗</span>
+            </a>
+            <a href="tel:+919975232333" class="btn-ref-phone">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span>Call Us: +91 9975 232 333</span>
+            </a>
+          </div>
+          <div class="hero-ref-breadcrumb">
+            <a href="index.html">Home</a> &nbsp;/&nbsp; <span>Equipment &amp; Technology</span>
+          </div>
+        </div>
+
+        <div class="hero-ref-right">
+          <div class="hero-diamond-shape">
+            <img src="images/SIogo.png" alt="" class="hero-diamond-logo" aria-hidden="true">
+          </div>
+          <img src="images/laserTracker1.png" alt="Leica Absolute Laser Tracker 80m Portable System" class="hero-machinery-img" style="max-height:480px; object-fit:contain;" loading="eager">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipment 1: SIMSCAN GEN2 -->
+  <section class="section section-bg-white" id="simscan">
+    <div class="container">
+      <div style="display:grid; grid-template-columns: 1fr; gap:3.5rem; align-items:center;" class="lg-grid-2">
+        <div>
+          <span class="section-tag">Portable 3D Laser Scanner</span>
+          <h2 class="text-h2" style="margin-bottom:0.75rem;">SIMSCAN GEN2 – Compact 3D Scanner</h2>
+          <p style="font-size:1.05rem; color:var(--color-neutral-700); line-height:1.7; margin-bottom:1.25rem;">
+            The SIMSCAN GEN2 is the benchmark portable 3D scanner engineered for high-precision measurement in tight spaces and challenging shop floor environments. Weighing only 570 grams, its full-metal aerospace housing offers unprecedented ergonomics without compromising rigidity.
+          </p>
+
+          <h3 style="font-size:1.15rem; margin-bottom:0.75rem; color:var(--color-neutral-900);">Key Features:</h3>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; margin-bottom:1.5rem;">
+            <li style="display:flex; align-items:center; gap:0.5rem; font-size:0.925rem; color:var(--color-neutral-700);">
+              <span style="color:var(--color-secondary-500); font-weight:700;">✓</span> Three scanning modes: Ultra-fast, Hyperfine, and Deep hole
+            </li>
+            <li style="display:flex; align-items:center; gap:0.5rem; font-size:0.925rem; color:var(--color-neutral-700);">
+              <span style="color:var(--color-secondary-500); font-weight:700;">✓</span> Captures dark, black, and reflective shiny surfaces without spray
+            </li>
+            <li style="display:flex; align-items:center; gap:0.5rem; font-size:0.925rem; color:var(--color-neutral-700);">
+              <span style="color:var(--color-secondary-500); font-weight:700;">✓</span> Lightweight 570g ergonomic design for effortless single-handed operation
+            </li>
+            <li style="display:flex; align-items:center; gap:0.5rem; font-size:0.925rem; color:var(--color-neutral-700);">
+              <span style="color:var(--color-secondary-500); font-weight:700;">✓</span> Blue laser cross-grid technology for fine edge resolution
+            </li>
+          </ul>
+
+          <h3 style="font-size:1.15rem; margin-bottom:0.75rem; color:var(--color-neutral-900);">Specifications:</h3>
+          <div class="equipment-specs-grid" style="margin-bottom:1.5rem;">
+            <div class="spec-cell">
+              <div class="spec-value">0.020 mm</div>
+              <div class="spec-key">Accuracy</div>
+            </div>
+            <div class="spec-cell">
+              <div class="spec-value">570 g</div>
+              <div class="spec-key">Weight</div>
+            </div>
+            <div class="spec-cell">
+              <div class="spec-value">5.8M meas/s</div>
+              <div class="spec-key">Scan Speed</div>
+            </div>
+            <div class="spec-cell">
+              <div class="spec-value">700 × 600 mm</div>
+              <div class="spec-key">Scan Area</div>
+            </div>
+          </div>
+
+          <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+            <a href="contact.html" class="btn btn-primary">Book SIMSCAN Onsite →</a>
+            <a href="tel:+919975232333" class="btn btn-outline-primary">Speak to Engineer</a>
+          </div>
+        </div>
+
+        <div>
+          <div style="background:var(--color-primary-50); border-radius:var(--radius-2xl); padding:2rem; border:1px solid var(--color-primary-200); text-align:center;">
+            <img src="images/SIMSCAN GEN2.png" alt="SIMSCAN GEN2 Portable Scanner" style="max-height:360px; margin:0 auto; object-fit:contain;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipment 2: NIMBLETRACK GEN2 -->
+  <section class="section section-bg-light" id="nimbletrack">
+    <div class="container">
+      <div style="display:grid; grid-template-columns: 1fr; gap:3.5rem; align-items:center;" class="lg-grid-2">
+        <div style="order:2;" class="lg-order-1">
+          <div style="background:#ffffff; border-radius:var(--radius-2xl); padding:2rem; border:1px solid var(--color-neutral-200); text-align:center;">
+            <img src="images/NIMBLETRACK GEN2.png" alt="NimbleTrack GEN2 Wireless Optical Scanner" style="max-height:360px; margin:0 auto; object-fit:contain;">
+          </div>
+        </div>
+
+        <div style="order:1;" class="lg-order-2">
+          <span class="section-tag">Wireless Optical 3D Scanning</span>
+          <h2 class="text-h2" style="margin-bottom:0.75rem;">NimbleTrack GEN2 – Wireless System</h2>
+          <p style="font-size:1.05rem; color:var(--color-neutral-700); line-height:1.7; margin-bottom:1.25rem;">
+            The NimbleTrack GEN2 revolutionizes 3D metrology by providing complete wireless optical tracking freedom. It eliminates the time-consuming step of sticking target markers onto components, making it ideal for in-cabin automotive testing, fixture setup, and rapid shop-floor verification.
+          </p>
+
+          <h3 style="font-size:1.15rem; margin-bottom:0.75rem; color:var(--color-neutral-900);">Key Features:</h3>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; margin-bottom:1.5rem;">
+            <li style="display:flex; align-items:center; gap:0.5rem; font-size:0.925rem; color:var(--color-neutral-700);">
+              <span style="color:var(--color-secondary-500); font-weight:700;">✓</span> 100% wireless freedom with zero cables or tethering
+            </li>
+            <li style="display:flex; align-items:center; gap:0.5rem; font-size:0.925rem; color:var(--color-neutral-700);">
+              <span style="color:var(--color-secondary-500); font-weight:700;">✓</span> Targetless scanning: start scanning immediately without stick markers
+            </li>
+            <li style="display:flex; align-items:center; gap:0.5rem; font-size:0.925rem; color:var(--color-neutral-700);">
+              <span style="color:var(--color-secondary-500); font-weight:700;">✓</span> High dynamic optical tracking cameras with carbon fiber frame
+            </li>
+            <li style="display:flex; align-items:center; gap:0.5rem; font-size:0.925rem; color:var(--color-neutral-700);">
+              <span style="color:var(--color-secondary-500); font-weight:700;">✓</span> In-situ measurement for tight car interiors and complex assemblies
+            </li>
+          </ul>
+
+          <h3 style="font-size:1.15rem; margin-bottom:0.75rem; color:var(--color-neutral-900);">Specifications:</h3>
+          <div class="equipment-specs-grid" style="margin-bottom:1.5rem;">
+            <div class="spec-cell">
+              <div class="spec-value">0.025 mm</div>
+              <div class="spec-key">Accuracy</div>
+            </div>
+            <div class="spec-cell">
+              <div class="spec-value">0.044 mm</div>
+              <div class="spec-key">Volumetric</div>
+            </div>
+            <div class="spec-cell">
+              <div class="spec-value">Targetless</div>
+              <div class="spec-key">Tracking</div>
+            </div>
+            <div class="spec-cell">
+              <div class="spec-value">Wireless</div>
+              <div class="spec-key">Connectivity</div>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn btn-primary">Inquire About NimbleTrack →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipment 3: LEICA LASER TRACKER -->
+  <section class="section section-bg-white" id="leica">
+    <div class="container">
+      <div style="display:grid; grid-template-columns: 1fr; gap:3.5rem; align-items:center;" class="lg-grid-2">
+        <div>
+          <span class="section-tag">Large-Volume Metrology</span>
+          <h2 class="text-h2" style="margin-bottom:0.75rem;">Leica Laser Tracker (AT960 Series)</h2>
+          <p style="font-size:1.05rem; color:var(--color-neutral-700); line-height:1.7; margin-bottom:1.25rem;">
+            The Leica Laser Tracker represents the pinnacle of large-scale coordinate metrology. With an active measurement envelope of up to 80 meters diameter, it ensures sub-millimeter precision across massive aerospace assemblies, power turbine alignments, and heavy rail infrastructure.
+          </p>
+
+          <h3 style="font-size:1.15rem; margin-bottom:0.75rem; color:var(--color-neutral-900);">Key Features:</h3>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; margin-bottom:1.5rem;">
+            <li style="display:flex; align-items:center; gap:0.5rem; font-size:0.925rem; color:var(--color-neutral-700);">
+              <span style="color:var(--color-secondary-500); font-weight:700;">✓</span> Up to 80m spherical range with sub-millimeter volumetric precision
+            </li>
+            <li style="display:flex; align-items:center; gap:0.5rem; font-size:0.925rem; color:var(--color-neutral-700);">
+              <span style="color:var(--color-secondary-500); font-weight:700;">✓</span> PowerLock technology automatically re-acquires interrupted laser beams
+            </li>
+            <li style="display:flex; align-items:center; gap:0.5rem; font-size:0.925rem; color:var(--color-neutral-700);">
+              <span style="color:var(--color-secondary-500); font-weight:700;">✓</span> Dynamic 6DoF probing and hand-held laser scanning
+            </li>
+            <li style="display:flex; align-items:center; gap:0.5rem; font-size:0.925rem; color:var(--color-neutral-700);">
+              <span style="color:var(--color-secondary-500); font-weight:700;">✓</span> Real-time fixture adjustment and digital machine tool alignment
+            </li>
+          </ul>
+
+          <h3 style="font-size:1.15rem; margin-bottom:0.75rem; color:var(--color-neutral-900);">Specifications:</h3>
+          <div class="equipment-specs-grid" style="margin-bottom:1.5rem;">
+            <div class="spec-cell">
+              <div class="spec-value">80 m</div>
+              <div class="spec-key">Range</div>
+            </div>
+            <div class="spec-cell">
+              <div class="spec-value">15µm + 6µm/m</div>
+              <div class="spec-key">Volumetric</div>
+            </div>
+            <div class="spec-cell">
+              <div class="spec-value">13.4 kg</div>
+              <div class="spec-key">Weight</div>
+            </div>
+            <div class="spec-cell">
+              <div class="spec-value">6DoF</div>
+              <div class="spec-key">Probing & Scan</div>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn btn-blue">Request Leica Tracker Onsite →</a>
+        </div>
+
+        <div>
+          <div style="background:var(--color-primary-50); border-radius:var(--radius-2xl); padding:2rem; border:1px solid var(--color-primary-200); text-align:center;">
+            <img src="images/serviceLaserTracker.png" alt="Leica Laser Tracker Mounted on Tripod" style="max-height:360px; margin:0 auto; object-fit:contain;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipment 4: FARO ARMS -->
+  <section class="section section-bg-light" id="faro">
+    <div class="container">
+      <div style="display:grid; grid-template-columns: 1fr; gap:3.5rem; align-items:center;" class="lg-grid-2">
+        <div style="order:2;" class="lg-order-1">
+          <div style="background:#ffffff; border-radius:var(--radius-2xl); padding:2rem; border:1px solid var(--color-neutral-200); text-align:center;">
+            <img src="images/HeroSection22.png" alt="FARO Arm Quantum series" style="max-height:360px; margin:0 auto; object-fit:contain;">
+          </div>
+        </div>
+
+        <div style="order:1;" class="lg-order-2">
+          <span class="section-tag">Portable Coordinate Measuring Machine</span>
+          <h2 class="text-h2" style="margin-bottom:0.75rem;">FARO Arm (Quantum & Edge Series)</h2>
+          <p style="font-size:1.05rem; color:var(--color-neutral-700); line-height:1.7; margin-bottom:1.25rem;">
+            The FARO Arm is the world's most trusted articulated portable CMM. Combining high-accuracy contact hard probing with non-contact laser line scanning, it provides the versatility required for rapid first-article inspection, engine blocks, and machine tooling validation.
+          </p>
+
+          <h3 style="font-size:1.15rem; margin-bottom:0.75rem; color:var(--color-neutral-900);">Key Features:</h3>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; margin-bottom:1.5rem;">
+            <li style="display:flex; align-items:center; gap:0.5rem; font-size:0.925rem; color:var(--color-neutral-700);">
+              <span style="color:var(--color-secondary-500); font-weight:700;">✓</span> 7-Axis articulated freedom for reaching deep holes and complex geometry
+            </li>
+            <li style="display:flex; align-items:center; gap:0.5rem; font-size:0.925rem; color:var(--color-neutral-700);">
+              <span style="color:var(--color-secondary-500); font-weight:700;">✓</span> Dual probe setup: high-definition laser line probe + touch trigger probe
+            </li>
+            <li style="display:flex; align-items:center; gap:0.5rem; font-size:0.925rem; color:var(--color-neutral-700);">
+              <span style="color:var(--color-secondary-500); font-weight:700;">✓</span> Internal counterbalance for effortless, fatigue-free measurement
+            </li>
+            <li style="display:flex; align-items:center; gap:0.5rem; font-size:0.925rem; color:var(--color-neutral-700);">
+              <span style="color:var(--color-secondary-500); font-weight:700;">✓</span> Strict ISO 10360-12 compliance for traceable repeatability
+            </li>
+          </ul>
+
+          <h3 style="font-size:1.15rem; margin-bottom:0.75rem; color:var(--color-neutral-900);">Specifications:</h3>
+          <div class="equipment-specs-grid" style="margin-bottom:1.5rem;">
+            <div class="spec-cell">
+              <div class="spec-value">0.024 mm</div>
+              <div class="spec-key">Accuracy</div>
+            </div>
+            <div class="spec-cell">
+              <div class="spec-value">2.5m - 4.0m</div>
+              <div class="spec-key">Volume</div>
+            </div>
+            <div class="spec-cell">
+              <div class="spec-value">10.1 kg</div>
+              <div class="spec-key">Weight</div>
+            </div>
+            <div class="spec-cell">
+              <div class="spec-value">Dual Probe</div>
+              <div class="spec-key">Touch + Laser</div>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn btn-primary">Book FARO Arm Inspection →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipment 5: AUTOSCAN INSPEC2 -->
+  <section class="section section-bg-white" id="autoscan">
+    <div class="container">
+      <div style="display:grid; grid-template-columns: 1fr; gap:3.5rem; align-items:center;" class="lg-grid-2">
+        <div>
+          <span class="section-tag">0.010 mm Desktop Scanning</span>
+          <h2 class="text-h2" style="margin-bottom:0.75rem;">AutoScan Inspec2 – Automated Desktop Scanner</h2>
+          <p style="font-size:1.05rem; color:var(--color-neutral-700); line-height:1.7; margin-bottom:1.25rem;">
+            The AutoScan Inspec2 is a specialized desktop 3D inspection scanner engineered to capture small, complex components with <strong>0.010 mm (10 µm) metrology-grade accuracy</strong>. Its automated 3-axis turntable rotates the part seamlessly to capture every angle with full-color textures.
+          </p>
+
+          <h3 style="font-size:1.15rem; margin-bottom:0.75rem; color:var(--color-neutral-900);">Key Features:</h3>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:0.6rem; margin-bottom:1.5rem;">
+            <li style="display:flex; align-items:center; gap:0.5rem; font-size:0.925rem; color:var(--color-neutral-700);">
+              <span style="color:var(--color-secondary-500); font-weight:700;">✓</span> 10-micron metrology-grade accuracy for miniature parts
+            </li>
+            <li style="display:flex; align-items:center; gap:0.5rem; font-size:0.925rem; color:var(--color-neutral-700);">
+              <span style="color:var(--color-secondary-500); font-weight:700;">✓</span> Automated 3-axis turntable for multi-angle, zero-blind-spot scanning
+            </li>
+            <li style="display:flex; align-items:center; gap:0.5rem; font-size:0.925rem; color:var(--color-neutral-700);">
+              <span style="color:var(--color-secondary-500); font-weight:700;">✓</span> Dual 5.0 MP high-resolution structural light cameras
+            </li>
+            <li style="display:flex; align-items:center; gap:0.5rem; font-size:0.925rem; color:var(--color-neutral-700);">
+              <span style="color:var(--color-secondary-500); font-weight:700;">✓</span> Full-color texture camera ready for GD&T inspection and reverse engineering
+            </li>
+          </ul>
+
+          <h3 style="font-size:1.15rem; margin-bottom:0.75rem; color:var(--color-neutral-900);">Specifications:</h3>
+          <div class="equipment-specs-grid" style="margin-bottom:1.5rem;">
+            <div class="spec-cell">
+              <div class="spec-value">0.010 mm</div>
+              <div class="spec-key">Accuracy</div>
+            </div>
+            <div class="spec-cell">
+              <div class="spec-value">Dual 5.0 MP</div>
+              <div class="spec-key">Cameras</div>
+            </div>
+            <div class="spec-cell">
+              <div class="spec-value">3-Axis</div>
+              <div class="spec-key">Turntable</div>
+            </div>
+            <div class="spec-cell">
+              <div class="spec-value">5.0 kg</div>
+              <div class="spec-key">Max Part Load</div>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn btn-blue">Request Desktop 3D Scan →</a>
+        </div>
+
+        <div>
+          <div style="background:var(--color-primary-50); border-radius:var(--radius-2xl); padding:2rem; border:1px solid var(--color-primary-200); text-align:center;">
+            <img src="images/autoscan-inspec2.png" alt="AutoScan Inspec2 Automated Desktop 3D Scanner" style="max-height:360px; margin:0 auto; object-fit:contain;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Software Ecosystem Section -->
+  <section class="section section-bg-light">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Software Stack</span>
+        <h2 class="text-h2 section-title">Industry-Standard Metrology & CAD Software</h2>
+        <p class="section-desc">
+          World-class measurement hardware requires equally powerful software processing to extract actionable CAD features and GD&T quality inspection.
+        </p>
+      </div>
+
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:1.5rem;">
+        <div class="feature-card">
+          <h4>PolyWorks|Inspector™</h4>
+          <p style="font-size:0.875rem; color:var(--color-neutral-600); margin-top:0.4rem;">
+            The enterprise 3D dimensional analysis platform. We use PolyWorks for CAD alignment, surface deviation heatmaps, and GD&T compliance tables.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h4>Geomagic Design X</h4>
+          <p style="font-size:0.875rem; color:var(--color-neutral-600); margin-top:0.4rem;">
+            The gold standard in reverse engineering software. Converts raw 3D point clouds directly into parametric CAD models with full design history.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h4>Geomagic Control X</h4>
+          <p style="font-size:0.875rem; color:var(--color-neutral-600); margin-top:0.4rem;">
+            Comprehensive inspection automation software used for automated first-article reporting, trend analysis, and pass/fail quality criteria.
+          </p>
+        </div>
+        <div class="feature-card">
+          <h4>CATIA V5 & SolidWorks</h4>
+          <p style="font-size:0.875rem; color:var(--color-neutral-600); margin-top:0.4rem;">
+            Native CAD modeling platforms for automotive and aerospace components, ensuring 100% interoperability with client engineering databases.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="cta-bg-image">
+      <img src="images/boldFuture.png" alt="" aria-hidden="true">
+    </div>
+    <div class="container cta-grid">
+      <div class="cta-text-side">
+        <span class="section-tag" style="color:var(--color-secondary-400);">Expert Guidance</span>
+        <h2 class="text-display">Need Help Selecting the Right Hardware for Your Part?</h2>
+        <p>
+          Speak directly with founder Amol Palande and our metrology engineers. We will analyze your drawing tolerances and recommend the most cost-effective hardware.
+        </p>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-primary btn-lg">Request Consultation →</a>
+          <a href="tel:+919975232333" class="btn btn-outline-white btn-lg">Call +91 9975 232 333</a>
+        </div>
+      </div>
+
+      <div class="cta-contact-cards">
+        <a href="tel:+919975232333" class="cta-contact-card">
+          <div class="cta-card-icon">
+            <img src="images/phone.png" alt="Phone">
+          </div>
+          <div class="cta-card-info">
+            <p>Direct Phone Line</p>
+            <p>+91 9975 232 333</p>
+          </div>
+        </a>
+
+        <a href="mailto:amol.palande@sunrisemetrology.com" class="cta-contact-card">
+          <div class="cta-card-icon">
+            <img src="images/email.png" alt="Email">
+          </div>
+          <div class="cta-card-info">
+            <p>Direct Email Support</p>
+            <p>amol.palande@sunrisemetrology.com</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html">
+            <img src="images/footerlogo.png" alt="Sunrise Metrology Solutions" style="max-height:60px; width:auto;">
+          </a>
+          <p>
+            Delivering accurate 3D scanning, inspection, and reverse engineering services that ensure quality, eliminate errors, and accelerate manufacturing workflows.
+          </p>
+          <div class="footer-badge-list">
+            <span class="footer-badge">ISO Compliant</span>
+            <span class="footer-badge">0.01 mm Accuracy</span>
+            <span class="footer-badge">NABL Traceable</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Company</a></li>
+            <li><a href="services.html">Metrology Services</a></li>
+            <li><a href="equipment.html">Equipment Fleet</a></li>
+            <li><a href="contact.html">Request Quotation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Instruments</h4>
+          <ul class="footer-links">
+            <li><a href="equipment.html#simscan">SIMSCAN GEN2 Scanner</a></li>
+            <li><a href="equipment.html#nimbletrack">NimbleTrack GEN2 Wireless</a></li>
+            <li><a href="equipment.html#leica">Leica Laser Trackers</a></li>
+            <li><a href="equipment.html#faro">FARO Quantum Arms</a></li>
+            <li><a href="equipment.html#autoscan">AutoScan Inspec2 Desktop</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Presence</h4>
+          <p style="font-size:0.875rem; color:var(--color-neutral-600); margin-bottom:0.5rem;">
+            Head Office: <strong>Pune, Maharashtra</strong><br>
+            Regional Support: <strong>Bengaluru, Karnataka</strong><br>
+            Onsite Deployment: <strong>Pan-India</strong>
+          </p>
+          <div class="footer-map-thumb">
+            <iframe width="100%" height="125" style="border:0;" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=73.65%2C18.45%2C74.05%2C18.68&amp;layer=mapnik&amp;marker=18.5204%2C73.8567"></iframe>
+          </div>
+          <a href="contact.html#facility-map-section" class="footer-map-link">
+            <span>📍 Interactive Map & Directions</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2026 Sunrise Metrology Solutions Pvt. Ltd. All Rights Reserved.</p>
+        <div class="developer-badge">
+          <span>Accuracy That Drives Quality</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Call & WhatsApp Action Dock -->
+  <div class="floating-contact-dock" id="floatingContactDock" role="region" aria-label="Floating quick contact options">
+    <a href="tel:+919975232333" class="floating-dock-btn floating-call-btn" title="Call Sunrise Metrology Directly" aria-label="Call +91 9975 232 333">
+      <div class="floating-btn-icon">
+        <span class="floating-pulse-ring"></span>
+        <svg viewBox="0 0 24 24" width="20" height="20">
+          <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+      </div>
+      <div class="floating-btn-text">
+        <span class="floating-btn-sub">Direct Call</span>
+        <span class="floating-btn-main">+91 9975 232 333</span>
+      </div>
+    </a>
+    <a href="https://wa.me/919975232333?text=Hello%20Sunrise%20Metrology,%20I%20would%20like%20to%20inquire%20about%20your%203D%20scanning%20and%20inspection%20services." 
+       target="_blank" rel="noopener noreferrer" class="floating-dock-btn floating-whatsapp-btn" title="Chat with us on WhatsApp" aria-label="Chat on WhatsApp">
+      <div class="floating-btn-icon">
+        <span class="floating-pulse-ring" style="border-color:rgba(37,211,102,0.7);"></span>
+        <svg viewBox="0 0 24 24" width="22" height="22">
+          <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.82 14.04c-.24.68-1.2 1.26-1.78 1.34-.52.08-1.2.14-3.52-.79-2.97-1.19-4.88-4.22-5.03-4.41-.15-.2-1.21-1.61-1.21-3.07 0-1.46.76-2.18 1.03-2.48.27-.3.59-.37.79-.37.2 0 .4 0 .58.01.19.01.44-.07.69.53.25.6.86 2.1.94 2.25.08.16.14.34.03.55-.1.21-.15.34-.3.51-.15.17-.32.38-.46.51-.15.15-.31.31-.13.62.18.31.79 1.3 1.7 2.11 1.17 1.04 2.15 1.36 2.46 1.51.31.15.49.13.67-.08.18-.21.79-.92 1-1.23.21-.31.42-.26.71-.15.29.11 1.84.87 2.16 1.03.32.16.53.24.61.37.08.14.08.8-.16 1.48z"/>
+        </svg>
+      </div>
+      <div class="floating-btn-text">
+        <span class="floating-btn-sub">Chat Live</span>
+        <span class="floating-btn-main">WhatsApp Us</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>

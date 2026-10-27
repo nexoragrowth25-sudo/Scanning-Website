@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-labelledby="reportChipIconTitle">
+  <title id="reportChipIconTitle">Inspection reports icon</title>
+  <path
+    d="M13 6.5h16l6 6v27a2 2 0 01-2 2H13a2 2 0 01-2-2v-31a2 2 0 012-2z"
+    fill="none"
+    stroke="#184762"
+    stroke-width="2.4"
+    stroke-linejoin="round"
+  />
+  <path d="M29 6.5v6h6" fill="none" stroke="#184762" stroke-width="2.4" stroke-linejoin="round" />
+  <line x1="15.5" y1="20" x2="26.5" y2="20" stroke="#184762" stroke-width="2.2" stroke-linecap="round" />
+  <line x1="15.5" y1="25" x2="26.5" y2="25" stroke="#184762" stroke-width="2.2" stroke-linecap="round" />
+  <line x1="15.5" y1="30" x2="22.5" y2="30" stroke="#184762" stroke-width="2.2" stroke-linecap="round" />
+  <circle cx="34" cy="34" r="9" fill="#fff" stroke="#fe6911" stroke-width="2.4" />
+  <path d="M30 34l3 3 6-6" fill="none" stroke="#fe6911" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

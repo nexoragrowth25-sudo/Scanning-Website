@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | 3D Scanning, Laser Tracker & CMM Inspection | Sunrise Metrology</title>
+  <meta name="description" content="Explore Sunrise Metrology's services: Onsite 3D Scanning, Large-Volume Laser Tracker Inspection, CMM Quality Assurance, AutoScan Desktop Scanning, and Parametric Reverse Engineering.">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Sunrise Metrology Homepage">
+        <img src="images/logo-primary.svg" alt="Sunrise Metrology Solutions" width="290" height="70">
+      </a>
+      <nav aria-label="Main Navigation">
+        <!-- Desktop Nav (Original Page Names Preserved) -->
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="services.html" class="nav-link active">Services</a></li>
+          <li><a href="equipment.html" class="nav-link">Equipment &amp; Technology</a></li>
+          <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <a href="tel:+919975232333" class="nav-phone-link" aria-label="Call +91 9975 232 333">
+          <span>Call Us: +91 9975 232 333</span>
+        </a>
+        <a href="contact.html" class="btn-get-in-touch">
+          <span>Get In Touch</span>
+          <span class="btn-arrow">↗</span>
+        </a>
+        <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+  <aside class="mobile-drawer" id="mobileDrawer">
+    <div class="drawer-header">
+      <img src="images/logo-primary.svg" alt="Sunrise Metrology" style="max-height:42px; width:auto;">
+      <button class="drawer-close" id="drawerClose">&times;</button>
+    </div>
+    <ul class="drawer-links">
+      <li><a href="index.html" class="drawer-link">Home</a></li>
+      <li><a href="about.html" class="drawer-link">About Us</a></li>
+      <li><a href="services.html" class="drawer-link active">Services</a></li>
+      <li><a href="equipment.html" class="drawer-link">Equipment &amp; Technology</a></li>
+      <li><a href="contact.html" class="drawer-link">Contact Us</a></li>
+    </ul>
+    <div class="drawer-footer">
+      <a href="tel:+919975232333" class="btn btn-primary" style="width:100%;">Call +91 9975 232 333</a>
+      <a href="contact.html" class="btn btn-blue" style="width:100%;">Get In Touch ↗</a>
+    </div>
+  </aside>
+
+  <!-- Page Hero (Reference Layout with Original Data) -->
+  <section class="page-hero-ref-section">
+    <div class="container">
+      <div class="hero-ref-grid">
+        <div class="hero-ref-left">
+          <div class="hero-ref-tag">
+            <span class="ref-bar">|</span>
+            <span class="ref-tag-text">Pan-India Onsite Deployment · 0.010mm Accuracy</span>
+            <span class="ref-flag">🇮🇳</span>
+          </div>
+          <!-- Hero Main Title (Original Data Preserved) -->
+          <h1 class="hero-ref-title">
+            <span class="title-highlight">Metrology, Scanning</span>
+            <span class="title-dark">&amp; Reverse Engineering</span>
+            <span class="title-dark">Services</span>
+          </h1>
+          <!-- Hero Subtitle (Original Data Preserved) -->
+          <p class="hero-ref-desc">
+            Delivering end-to-end dimensional measurement, laser tracker alignment, first-article verification, and parametric CAD modeling for critical industrial applications.
+          </p>
+          <div class="hero-ref-actions">
+            <a href="contact.html" class="btn-get-in-touch" style="font-size:1rem; padding:0.75rem 1.75rem;">
+              <span>Request Quotation</span>
+              <span class="btn-arrow">↗</span>
+            </a>
+            <a href="tel:+919975232333" class="btn-ref-phone">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span>Call Us: +91 9975 232 333</span>
+            </a>
+          </div>
+          <div class="hero-ref-breadcrumb">
+            <a href="index.html">Home</a> &nbsp;/&nbsp; <span>Services</span>
+          </div>
+        </div>
+
+        <div class="hero-ref-right">
+          <div class="hero-diamond-shape">
+            <img src="images/SIogo.png" alt="" class="hero-diamond-logo" aria-hidden="true">
+          </div>
+          <img src="images/heroSection1.png" alt="Industrial 3D Scanning and Inspection in Action" class="hero-machinery-img" loading="eager">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service 1: Onsite 3D Laser Scanning -->
+  <section class="section section-bg-white" id="scanning">
+    <div class="container">
+      <div style="display:grid; grid-template-columns: 1fr; gap:3.5rem; align-items:center;" class="lg-grid-2">
+        <div>
+          <span class="section-tag">Portable & Agile</span>
+          <h2 class="text-h2" style="margin-bottom:1rem;">Onsite 3D Laser Scanning Service</h2>
+          <p style="font-size:1.05rem; color:var(--color-neutral-700); line-height:1.7; margin-bottom:1.25rem;">
+            Our onsite 3D scanning service provides rapid, metrology-grade data capture directly at your manufacturing plant, eliminating the high costs, downtime, and risk associated with shipping sensitive tools or large machinery.
+          </p>
+          <p style="font-size:0.95rem; color:var(--color-neutral-600); line-height:1.65; margin-bottom:1.5rem;">
+            Powered by the ultra-portable <strong>SIMSCAN GEN2</strong> and <strong>NimbleTrack</strong> optical systems, we capture up to 5.8 million points per second with 0.020 mm accuracy. From complex automotive sheet metal and dies to deep recesses and shiny chrome surfaces, our scanners capture true geometry without messy sprays.
+          </p>
+
+          <div style="background:var(--color-primary-50); border:1px solid var(--color-primary-200); border-radius:14px; padding:1.25rem; margin-bottom:1.5rem;">
+            <h4 style="font-size:0.95rem; margin-bottom:0.75rem; color:var(--color-primary-900);">Technical Highlights:</h4>
+            <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:0.75rem; font-size:0.875rem;">
+              <div>• <strong>Accuracy:</strong> 0.020 mm (20 µm)</div>
+              <div>• <strong>Scan Rate:</strong> 5.8M measurements/s</div>
+              <div>• <strong>Weight:</strong> 570g handheld agility</div>
+              <div>• <strong>Output:</strong> High-density STL, OBJ, PLY</div>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn btn-primary">Book Onsite 3D Scanning →</a>
+        </div>
+
+        <div>
+          <div style="border-radius:var(--radius-2xl); overflow:hidden; box-shadow:var(--shadow-xl); border:1px solid var(--color-neutral-200);">
+            <img src="images/service3DScanning.png" alt="Onsite 3D Laser Scanning Service" style="width:100%; height:400px; object-fit:cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service 2: Laser Tracker Inspection -->
+  <section class="section section-bg-light" id="laser-tracker">
+    <div class="container">
+      <div style="display:grid; grid-template-columns: 1fr; gap:3.5rem; align-items:center;" class="lg-grid-2">
+        <div style="order:2;" class="lg-order-1">
+          <div style="border-radius:var(--radius-2xl); overflow:hidden; box-shadow:var(--shadow-xl); border:1px solid var(--color-neutral-200);">
+            <img src="images/serviceLaserTracker2.png" alt="Leica Laser Tracker Large-Volume Inspection" style="width:100%; height:400px; object-fit:cover;">
+          </div>
+        </div>
+
+        <div style="order:1;" class="lg-order-2">
+          <span class="section-tag">Large Volume Leader</span>
+          <h2 class="text-h2" style="margin-bottom:1rem;">Laser Tracker Inspection (Up to 80m)</h2>
+          <p style="font-size:1.05rem; color:var(--color-neutral-700); line-height:1.7; margin-bottom:1.25rem;">
+            When component dimensions exceed conventional CMM envelopes, our <strong>Leica Laser Tracker</strong> inspection services deliver unparalleled volumetric accuracy over working distances of up to 80 meters.
+          </p>
+          <p style="font-size:0.95rem; color:var(--color-neutral-600); line-height:1.65; margin-bottom:1.5rem;">
+            Equipped with PowerLock laser beam re-acquisition, high-speed 6DoF hand-held probing, and continuous tracking, we align large assembly fixtures, inspect aircraft wings and fuselage sections, calibrate massive machine tool beds, and verify railway chassis.
+          </p>
+
+          <div style="background:#ffffff; border:1px solid var(--color-neutral-200); border-radius:14px; padding:1.25rem; margin-bottom:1.5rem;">
+            <h4 style="font-size:0.95rem; margin-bottom:0.75rem; color:var(--color-neutral-900);">Applications:</h4>
+            <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:0.75rem; font-size:0.875rem; color:var(--color-neutral-700);">
+              <div>• Aerospace fuselage & wings</div>
+              <div>• Heavy turbine casing alignment</div>
+              <div>• Automotive assembly framing jigs</div>
+              <div>• Locomotive chassis & bogie geometry</div>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn btn-blue">Request Laser Tracker Support →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service 3: CMM & Portable FARO Arm Inspection -->
+  <section class="section section-bg-white" id="cmm">
+    <div class="container">
+      <div style="display:grid; grid-template-columns: 1fr; gap:3.5rem; align-items:center;" class="lg-grid-2">
+        <div>
+          <span class="section-tag">Quality Assurance</span>
+          <h2 class="text-h2" style="margin-bottom:1rem;">CMM & FARO Arm Inspection Services</h2>
+          <p style="font-size:1.05rem; color:var(--color-neutral-700); line-height:1.7; margin-bottom:1.25rem;">
+            Our Coordinate Measuring Machine (CMM) and articulated FARO Arm inspection services guarantee rigid quality assurance through automated contact probing and high-definition laser scanning.
+          </p>
+          <p style="font-size:0.95rem; color:var(--color-neutral-600); line-height:1.65; margin-bottom:1.5rem;">
+            Designed for first-article inspection (FAI), batch quality verification, and machine tool runoff verification, the FARO Quantum Arm reaches inside deep bores, undercut features, and prismatic surfaces with 0.024 mm volumetric repeatability.
+          </p>
+
+          <div style="background:var(--color-primary-50); border:1px solid var(--color-primary-200); border-radius:14px; padding:1.25rem; margin-bottom:1.5rem;">
+            <h4 style="font-size:0.95rem; margin-bottom:0.75rem; color:var(--color-primary-900);">Key Capabilities:</h4>
+            <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:0.75rem; font-size:0.875rem;">
+              <div>• Hard contact probe verification</div>
+              <div>• HD Laser Line Probe scanning</div>
+              <div>• 7-Axis articulated freedom</div>
+              <div>• ISO 10360-12 compliance</div>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn btn-primary">Book FARO Arm Inspection →</a>
+        </div>
+
+        <div>
+          <div style="border-radius:var(--radius-2xl); overflow:hidden; box-shadow:var(--shadow-xl); border:1px solid var(--color-neutral-200);">
+            <img src="images/serviceCMMInspection.png" alt="CMM Inspection and FARO Arm Verification" style="width:100%; height:400px; object-fit:cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service 4: Desktop 3D Scanning (AutoScan Inspec2) -->
+  <section class="section section-bg-light" id="desktop">
+    <div class="container">
+      <div style="display:grid; grid-template-columns: 1fr; gap:3.5rem; align-items:center;" class="lg-grid-2">
+        <div style="order:2;" class="lg-order-1">
+          <div style="border-radius:var(--radius-2xl); overflow:hidden; box-shadow:var(--shadow-xl); border:1px solid var(--color-neutral-200);">
+            <img src="images/serviceDesktop3DScanner.jpg" alt="Desktop 3D Scanning AutoScan Inspec2" style="width:100%; height:400px; object-fit:cover;">
+          </div>
+        </div>
+
+        <div style="order:1;" class="lg-order-2">
+          <span class="section-tag">0.01 mm Metrology Grade</span>
+          <h2 class="text-h2" style="margin-bottom:1rem;">Desktop Automated 3D Scanning (AutoScan Inspec2)</h2>
+          <p style="font-size:1.05rem; color:var(--color-neutral-700); line-height:1.7; margin-bottom:1.25rem;">
+            Specifically engineered for small, intricate components, our desktop automated scanning service utilizes the state-of-the-art <strong>AutoScan Inspec2</strong> with dual 5.0 MP cameras and an automated 3-axis turntable.
+          </p>
+          <p style="font-size:0.95rem; color:var(--color-neutral-600); line-height:1.65; margin-bottom:1.5rem;">
+            Achieving up to <strong>0.010 mm (10-micron) accuracy</strong>, it automatically scans every orientation without human intervention, capturing micro-details on turbine blades, gears, medical implants, injection molded connectors, and precision jewelry.
+          </p>
+
+          <div style="background:#ffffff; border:1px solid var(--color-neutral-200); border-radius:14px; padding:1.25rem; margin-bottom:1.5rem;">
+            <h4 style="font-size:0.95rem; margin-bottom:0.75rem; color:var(--color-neutral-900);">Ideal Components:</h4>
+            <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:0.75rem; font-size:0.875rem; color:var(--color-neutral-700);">
+              <div>• Precision small gears & pinions</div>
+              <div>• Micro-machined electronics molds</div>
+              <div>• Orthopedic implants & surgical tools</div>
+              <div>• Aerospace fuel nozzles & blades</div>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn btn-blue">Request Desktop Scan Quote →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service 5: Reverse Engineering & CAD Modeling -->
+  <section class="section section-bg-white" id="reverse-engineering">
+    <div class="container">
+      <div style="display:grid; grid-template-columns: 1fr; gap:3.5rem; align-items:center;" class="lg-grid-2">
+        <div>
+          <span class="section-tag">Parametric CAD Recreation</span>
+          <h2 class="text-h2" style="margin-bottom:1rem;">Reverse Engineering & 3D CAD Modeling</h2>
+          <p style="font-size:1.05rem; color:var(--color-neutral-700); line-height:1.7; margin-bottom:1.25rem;">
+            Turn real-world physical parts into exact, parametric 3D CAD models. Whether you are recovering lost drawings for legacy machinery, recreating damaged tooling, or upgrading product design, our reverse engineering workflow ensures flawless design intent.
+          </p>
+          <p style="font-size:0.95rem; color:var(--color-neutral-600); line-height:1.65; margin-bottom:1.5rem;">
+            Using industry standard software like <strong>Geomagic Design X</strong>, <strong>SolidWorks</strong>, <strong>CATIA V5</strong>, and <strong>Siemens NX</strong>, our reverse engineers extract true sketches, prismatic cylinders, fillets, and organic Class-A NURBS surfaces with complete feature trees.
+          </p>
+
+          <div style="background:var(--color-primary-50); border:1px solid var(--color-primary-200); border-radius:14px; padding:1.25rem; margin-bottom:1.5rem;">
+            <h4 style="font-size:0.95rem; margin-bottom:0.75rem; color:var(--color-primary-900);">Deliverable Formats:</h4>
+            <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:0.75rem; font-size:0.875rem;">
+              <div>• <strong>Native:</strong> SolidWorks, CATIA, NX, Inventor</div>
+              <div>• <strong>Neutral:</strong> STEP (.stp), IGES (.igs), Parasolid (.x_t)</div>
+              <div>• <strong>Polygon:</strong> Watertight STL, OBJ, PLY for 3D Print</div>
+              <div>• <strong>2D Prints:</strong> Manufacturing GD&T prints (.dwg, .pdf)</div>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn btn-primary">Start Reverse Engineering Project →</a>
+        </div>
+
+        <div>
+          <div style="border-radius:var(--radius-2xl); overflow:hidden; box-shadow:var(--shadow-xl); border:1px solid var(--color-neutral-200);">
+            <img src="images/ServiceEngineering.png" alt="Reverse Engineering and CAD Modeling" style="width:100%; height:400px; object-fit:cover;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service 6: GD&T Inspection Reports & Color Deviation Mapping -->
+  <section class="section section-bg-light" id="reports">
+    <div class="container">
+      <div style="display:grid; grid-template-columns: 1fr; gap:3.5rem; align-items:center;" class="lg-grid-2">
+        <div style="order:2;" class="lg-order-1">
+          <div style="border-radius:var(--radius-2xl); overflow:hidden; box-shadow:var(--shadow-xl); background:linear-gradient(135deg, #002240 0%, #003866 100%); display:flex; align-items:center; justify-content:center; height:400px; padding:2.5rem;">
+            <img src="images/serviceInspectionReports.svg" alt="GD&T Inspection Reports" style="max-height:180px; width:auto; filter:brightness(0) invert(1);">
+          </div>
+        </div>
+
+        <div style="order:1;" class="lg-order-2">
+          <span class="section-tag">Traceable Quality Reports</span>
+          <h2 class="text-h2" style="margin-bottom:1rem;">GD&T Inspection Reports & 3D Color Deviation Maps</h2>
+          <p style="font-size:1.05rem; color:var(--color-neutral-700); line-height:1.7; margin-bottom:1.25rem;">
+            Raw measurement points are only useful when translated into actionable engineering insights. Our inspection reports deliver intuitive <strong>3D color-deviation heatmaps</strong> overlaid directly onto nominal CAD models.
+          </p>
+          <p style="font-size:0.95rem; color:var(--color-neutral-600); line-height:1.65; margin-bottom:1.5rem;">
+            Generated using <strong>PolyWorks Inspector</strong> and <strong>Geomagic Control X</strong>, our reports document comprehensive Geometric Dimensioning and Tolerancing (GD&T) metrics, including flatness, position, perpendicularity, profile, and runout with clear pass/fail flags.
+          </p>
+
+          <div style="background:#ffffff; border:1px solid var(--color-neutral-200); border-radius:14px; padding:1.25rem; margin-bottom:1.5rem;">
+            <h4 style="font-size:0.95rem; margin-bottom:0.75rem; color:var(--color-neutral-900);">Report Inclusions:</h4>
+            <div style="display:grid; grid-template-columns: repeat(2, 1fr); gap:0.75rem; font-size:0.875rem; color:var(--color-neutral-700);">
+              <div>• Nominal vs. Measured tabular data</div>
+              <div>• Visual 3D color gradient deviations</div>
+              <div>• Cross-sectional dimensional cuts</div>
+              <div>• Certified calibration certificate stamp</div>
+            </div>
+          </div>
+
+          <a href="contact.html" class="btn btn-blue">Request Sample Inspection PDF →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Capabilities Matrix Table -->
+  <section class="section section-bg-white">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Technical Matrix</span>
+        <h2 class="text-h2 section-title">Capabilities & Accuracy Comparison</h2>
+        <p class="section-desc">
+          Compare our primary metrology and scanning offerings across envelope size, volumetric accuracy, and typical project turnaround.
+        </p>
+      </div>
+
+      <div class="table-responsive">
+        <table class="tech-table">
+          <thead>
+            <tr>
+              <th>Service Domain</th>
+              <th>Hardware Used</th>
+              <th>Measurement Volume</th>
+              <th>Accuracy Level</th>
+              <th>Deliverables</th>
+              <th>Typical Turnaround</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Onsite 3D Scanning</strong></td>
+              <td>SIMSCAN GEN2 / NimbleTrack</td>
+              <td>0.1 m to 4.0 m</td>
+              <td>0.020 mm (20 µm)</td>
+              <td>STL, OBJ, PLY, Deviation Color Map</td>
+              <td>Same Day / 24 Hours</td>
+            </tr>
+            <tr>
+              <td><strong>Laser Tracker Alignment</strong></td>
+              <td>Leica AT960 Tracker</td>
+              <td>Up to 80.0 m</td>
+              <td>15 µm + 6 µm/m</td>
+              <td>Coordinate Alignment Report, GD&T</td>
+              <td>Immediate Onsite Report</td>
+            </tr>
+            <tr>
+              <td><strong>CMM & Arm Probing</strong></td>
+              <td>FARO Quantum Arm / CMM</td>
+              <td>Up to 4.0 m sphere</td>
+              <td>0.024 mm (24 µm)</td>
+              <td>FAI Dimensional Table, Pass/Fail Sheet</td>
+              <td>24 to 48 Hours</td>
+            </tr>
+            <tr>
+              <td><strong>Desktop Auto Scanning</strong></td>
+              <td>AutoScan Inspec2</td>
+              <td>Up to 300 mm</td>
+              <td>0.010 mm (10 µm)</td>
+              <td>Watertight STL, Color Texture, GD&T</td>
+              <td>24 Hours</td>
+            </tr>
+            <tr>
+              <td><strong>Reverse Engineering</strong></td>
+              <td>Geomagic Design X / CATIA</td>
+              <td>Any Size</td>
+              <td>Parametric CAD Match</td>
+              <td>STEP, IGES, SolidWorks, CATIA, 2D Prints</td>
+              <td>2 to 5 Days</td>
+            </tr>
+            <tr>
+              <td><strong>GD&T Deviation Reports</strong></td>
+              <td>PolyWorks / Control X</td>
+              <td>Any Size</td>
+              <td>CAD Deviation Analysis</td>
+              <td>Full 3D Color PDF, Excel Data Sheets</td>
+              <td>12 to 24 Hours</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <div class="cta-bg-image">
+      <img src="images/boldFuture.png" alt="" aria-hidden="true">
+    </div>
+    <div class="container cta-grid">
+      <div class="cta-text-side">
+        <span class="section-tag" style="color:var(--color-secondary-400);">Accelerate Your Workflow</span>
+        <h2 class="text-display">Have a Component That Needs Immediate Scanning?</h2>
+        <p>
+          Send us your component photos, drawings, or CAD specs for an immediate feasibility check and customized price proposal within 2 hours.
+        </p>
+        <div style="display:flex; gap:1rem; flex-wrap:wrap;">
+          <a href="contact.html" class="btn btn-primary btn-lg">Request Quotation →</a>
+          <a href="tel:+919975232333" class="btn btn-outline-white btn-lg">Call +91 9975 232 333</a>
+        </div>
+      </div>
+
+      <div class="cta-contact-cards">
+        <a href="tel:+919975232333" class="cta-contact-card">
+          <div class="cta-card-icon">
+            <img src="images/phone.png" alt="Phone">
+          </div>
+          <div class="cta-card-info">
+            <p>Direct Phone Line</p>
+            <p>+91 9975 232 333</p>
+          </div>
+        </a>
+
+        <a href="mailto:amol.palande@sunrisemetrology.com" class="cta-contact-card">
+          <div class="cta-card-icon">
+            <img src="images/email.png" alt="Email">
+          </div>
+          <div class="cta-card-info">
+            <p>Email Inquiry</p>
+            <p>amol.palande@sunrisemetrology.com</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html">
+            <img src="images/footerlogo.png" alt="Sunrise Metrology Solutions" style="max-height:60px; width:auto;">
+          </a>
+          <p>
+            Delivering accurate 3D scanning, inspection, and reverse engineering services that ensure quality, eliminate errors, and accelerate manufacturing workflows.
+          </p>
+          <div class="footer-badge-list">
+            <span class="footer-badge">ISO Compliant</span>
+            <span class="footer-badge">0.01 mm Accuracy</span>
+            <span class="footer-badge">NABL Traceable</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Company</a></li>
+            <li><a href="services.html">Metrology Services</a></li>
+            <li><a href="equipment.html">Equipment Fleet</a></li>
+            <li><a href="contact.html">Request Quotation</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Instruments</h4>
+          <ul class="footer-links">
+            <li><a href="equipment.html#simscan">SIMSCAN GEN2 Scanner</a></li>
+            <li><a href="equipment.html#nimbletrack">NimbleTrack GEN2 Wireless</a></li>
+            <li><a href="equipment.html#leica">Leica Laser Trackers</a></li>
+            <li><a href="equipment.html#faro">FARO Quantum Arms</a></li>
+            <li><a href="equipment.html#autoscan">AutoScan Inspec2 Desktop</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Presence</h4>
+          <p style="font-size:0.875rem; color:var(--color-neutral-600); margin-bottom:0.5rem;">
+            Head Office: <strong>Pune, Maharashtra</strong><br>
+            Regional Support: <strong>Bengaluru, Karnataka</strong><br>
+            Onsite Deployment: <strong>Pan-India</strong>
+          </p>
+          <div class="footer-map-thumb">
+            <iframe width="100%" height="125" style="border:0;" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=73.65%2C18.45%2C74.05%2C18.68&amp;layer=mapnik&amp;marker=18.5204%2C73.8567"></iframe>
+          </div>
+          <a href="contact.html#facility-map-section" class="footer-map-link">
+            <span>📍 Interactive Map & Directions</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>Copyright © 2026 Sunrise Metrology Solutions Pvt. Ltd. All Rights Reserved.</p>
+        <div class="developer-badge">
+          <span>Accuracy That Drives Quality</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Call & WhatsApp Action Dock -->
+  <div class="floating-contact-dock" id="floatingContactDock" role="region" aria-label="Floating quick contact options">
+    <a href="tel:+919975232333" class="floating-dock-btn floating-call-btn" title="Call Sunrise Metrology Directly" aria-label="Call +91 9975 232 333">
+      <div class="floating-btn-icon">
+        <span class="floating-pulse-ring"></span>
+        <svg viewBox="0 0 24 24" width="20" height="20">
+          <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+      </div>
+      <div class="floating-btn-text">
+        <span class="floating-btn-sub">Direct Call</span>
+        <span class="floating-btn-main">+91 9975 232 333</span>
+      </div>
+    </a>
+    <a href="https://wa.me/919975232333?text=Hello%20Sunrise%20Metrology,%20I%20would%20like%20to%20inquire%20about%20your%203D%20scanning%20and%20inspection%20services." 
+       target="_blank" rel="noopener noreferrer" class="floating-dock-btn floating-whatsapp-btn" title="Chat with us on WhatsApp" aria-label="Chat on WhatsApp">
+      <div class="floating-btn-icon">
+        <span class="floating-pulse-ring" style="border-color:rgba(37,211,102,0.7);"></span>
+        <svg viewBox="0 0 24 24" width="22" height="22">
+          <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.82 14.04c-.24.68-1.2 1.26-1.78 1.34-.52.08-1.2.14-3.52-.79-2.97-1.19-4.88-4.22-5.03-4.41-.15-.2-1.21-1.61-1.21-3.07 0-1.46.76-2.18 1.03-2.48.27-.3.59-.37.79-.37.2 0 .4 0 .58.01.19.01.44-.07.69.53.25.6.86 2.1.94 2.25.08.16.14.34.03.55-.1.21-.15.34-.3.51-.15.17-.32.38-.46.51-.15.15-.31.31-.13.62.18.31.79 1.3 1.7 2.11 1.17 1.04 2.15 1.36 2.46 1.51.31.15.49.13.67-.08.18-.21.79-.92 1-1.23.21-.31.42-.26.71-.15.29.11 1.84.87 2.16 1.03.32.16.53.24.61.37.08.14.08.8-.16 1.48z"/>
+        </svg>
+      </div>
+      <div class="floating-btn-text">
+        <span class="floating-btn-sub">Chat Live</span>
+        <span class="floating-btn-main">WhatsApp Us</span>
+      </div>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+  <script src="js/chatbot.js"></script>
+</body>
+</html>
