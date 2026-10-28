@@ -714,12 +714,43 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.85rem;
 }
 
-/* Product Cards Row (AutoScan, SIMSCAN, NimbleTrack) */
+/* Product Cards Rotating Carousel (AutoScan, SIMSCAN, NimbleTrack, Leica, FARO) */
 .hero-ref-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
   margin-top: 1.75rem;
+  position: relative;
+  /* Crisp solid boundaries - no edge fade effect */
+}
+
+.hero-cards-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  animation: heroEquipmentCarousel 20s linear infinite;
+  will-change: transform;
+}
+
+.hero-cards-set {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding-right: 0.85rem;
+}
+
+.hero-ref-cards:hover .hero-cards-track,
+.hero-cards-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes heroEquipmentCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .hero-product-card {
@@ -729,20 +760,22 @@ h1, h2, h3, h4, h5, h6 {
   gap: 0.65rem;
   background: #1c8cc4;
   border: 2px solid rgba(255, 255, 255, 0.45);
-  border-radius: 12px;
+  border-radius: 14px;
   padding: 0.75rem 0.85rem;
   color: #ffffff !important;
   text-decoration: none;
-  min-width: 175px;
-  flex: 1 1 180px;
-  max-width: 230px;
+  width: 215px;
+  min-width: 215px;
+  max-width: 215px;
+  flex: 0 0 215px;
+  box-sizing: border-box;
   box-shadow: 0 8px 20px rgba(28, 140, 196, 0.28);
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
 .hero-product-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 14px 28px rgba(28, 140, 196, 0.42);
+  box-shadow: 0 14px 28px rgba(28, 140, 196, 0.45);
   border-color: #ffffff;
 }
 
@@ -957,15 +990,21 @@ h1, h2, h3, h4, h5, h6 {
     height: 250px;
   }
   .hero-ref-cards {
-    gap: 0.6rem;
+    margin-top: 1.25rem;
+  }
+  .hero-cards-track {
+    gap: 0.65rem;
   }
   .hero-product-card {
-    min-width: 140px;
-    padding: 0.6rem 0.75rem;
+    width: 200px;
+    min-width: 200px;
+    max-width: 200px;
+    flex: 0 0 200px;
+    padding: 0.65rem 0.75rem;
   }
   .card-img-box {
-    width: 68px;
-    height: 68px;
+    width: 72px;
+    height: 72px;
   }
 }
 
