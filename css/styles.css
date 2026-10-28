@@ -981,96 +981,235 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 991px) {
   .hero-ref-section,
   .page-hero-ref-section {
-    min-height: auto;
-    padding-top: 6rem;
-    padding-bottom: 2.75rem;
+    min-height: auto !important;
+    padding-top: 5.75rem !important;
+    padding-bottom: 2.5rem !important;
   }
   .hero-ref-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
   }
-  .hero-ref-title {
-    font-size: clamp(2rem, 4.4vw, 2.75rem);
-    line-height: 1.15;
-  }
+  /* Image UP (Top) */
   .hero-ref-right {
-    min-height: 300px;
-    max-width: 480px;
-    margin: 0 auto;
-    width: 100%;
+    order: 1 !important;
+    min-height: 240px !important;
+    max-width: 360px !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
   }
   .hero-diamond-shape {
-    width: 240px;
-    height: 240px;
-    border-radius: 32px;
+    width: 190px !important;
+    height: 190px !important;
+    border-radius: 28px !important;
   }
   .hero-machinery-img {
-    max-width: 380px;
-    max-height: 290px;
+    max-width: 300px !important;
+    max-height: 230px !important;
+    object-fit: contain !important;
+  }
+  /* Text DOWN (Bottom) - Center Aligned */
+  .hero-ref-left {
+    order: 2 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+  }
+  .hero-ref-tag {
+    justify-content: center !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .hero-ref-title {
+    font-size: clamp(1.9rem, 4.2vw, 2.6rem) !important;
+    line-height: 1.18 !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+  }
+  .hero-ref-title .title-highlight,
+  .hero-ref-title .title-dark {
+    display: block !important;
+    text-align: center !important;
+  }
+  .hero-ref-desc {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    max-width: 580px !important;
+  }
+  .hero-feature-pills-ref {
+    justify-content: center !important;
+    align-items: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .hero-ref-actions {
+    justify-content: center !important;
+    align-items: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .hero-ref-breadcrumb {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .hero-ref-cards {
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
 
 @media (max-width: 768px) {
   .hero-ref-section,
   .page-hero-ref-section {
-    padding-top: 5.75rem !important;
-    padding-bottom: 2.25rem !important;
+    padding-top: 5.25rem !important;
+    padding-bottom: 2rem !important;
     min-height: auto !important;
     overflow-x: hidden !important;
     background-position: center top !important;
-  }
-  .hero-ref-grid {
-    grid-template-columns: 1fr !important;
-    gap: 1.5rem !important;
     width: 100% !important;
+    box-sizing: border-box !important;
   }
-  .hero-ref-left {
+  .hero-ref-section .container,
+  .page-hero-ref-section .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
     width: 100% !important;
     max-width: 100% !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+  .hero-ref-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1.25rem !important;
+    width: 100% !important;
+  }
+
+  /* Image UP (Top of Screen) */
+  .hero-ref-right {
+    order: 1 !important;
+    min-height: 180px !important;
+    max-height: 220px !important;
+    width: 100% !important;
+    max-width: 290px !important;
+    margin: 0 auto 0.75rem auto !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: visible !important;
+  }
+  .hero-diamond-shape {
+    width: 140px !important;
+    height: 140px !important;
+    border-radius: 20px !important;
+    box-shadow: 0 8px 24px rgba(0, 56, 102, 0.12) !important;
+  }
+  .hero-diamond-logo {
+    width: 50% !important;
+    height: 50% !important;
+    opacity: 0.12 !important;
+  }
+  .hero-machinery-img {
+    width: 100% !important;
+    max-width: 240px !important;
+    max-height: 175px !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto !important;
+    filter: drop-shadow(0 8px 18px rgba(0, 31, 63, 0.18)) !important;
+  }
+
+  /* Text DOWN (Below Image) - All Data CENTER ALIGNED */
+  .hero-ref-left {
+    order: 2 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
   }
   .hero-ref-tag {
-    font-size: 0.8rem !important;
+    font-size: 0.78rem !important;
     gap: 0.35rem !important;
-    margin-bottom: 0.75rem !important;
+    margin: 0 auto 0.65rem auto !important;
     display: inline-flex !important;
     flex-wrap: wrap !important;
+    justify-content: center !important;
+    text-align: center !important;
     line-height: 1.35 !important;
+    max-width: 100% !important;
   }
   .hero-ref-tag .ref-bar {
     font-size: 1.15rem !important;
     margin-right: 2px !important;
   }
   .hero-ref-title {
-    font-size: clamp(1.7rem, 5.2vw, 2.25rem) !important;
+    font-size: clamp(1.5rem, 5.5vw, 2.1rem) !important;
     line-height: 1.18 !important;
-    margin-bottom: 0.85rem !important;
+    margin: 0 auto 0.75rem auto !important;
     word-break: break-word !important;
     letter-spacing: -0.02em !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+  .hero-ref-title .title-highlight,
+  .hero-ref-title .title-dark {
+    display: block !important;
+    text-align: center !important;
   }
   .hero-ref-desc {
-    font-size: 0.925rem !important;
+    font-size: 0.9rem !important;
     line-height: 1.55 !important;
     color: #475569 !important;
-    max-width: 100% !important;
-    margin-bottom: 1.15rem !important;
+    max-width: 540px !important;
+    width: 100% !important;
+    margin: 0 auto 1.15rem auto !important;
+    text-align: center !important;
   }
   .hero-feature-pills-ref {
     display: flex !important;
     flex-wrap: wrap !important;
+    justify-content: center !important;
+    align-items: center !important;
     gap: 0.4rem !important;
-    margin-bottom: 1.15rem !important;
+    margin: 0 auto 1.15rem auto !important;
+    width: 100% !important;
   }
   .hero-pill-ref {
-    font-size: 0.775rem !important;
-    padding: 0.3rem 0.65rem !important;
+    font-size: 0.75rem !important;
+    padding: 0.28rem 0.65rem !important;
     line-height: 1.3 !important;
+    justify-content: center !important;
+    text-align: center !important;
   }
   .hero-ref-actions {
     display: flex !important;
     flex-wrap: wrap !important;
-    gap: 0.6rem !important;
-    margin-bottom: 1.15rem !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.55rem !important;
+    margin: 0 auto 1.15rem auto !important;
     width: 100% !important;
+    max-width: 440px !important;
   }
   .hero-ref-actions .btn-get-in-touch,
   .hero-ref-actions .btn,
@@ -1081,45 +1220,48 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
   }
   .hero-ref-breadcrumb {
-    font-size: 0.825rem !important;
-    margin-top: 0.25rem !important;
-    margin-bottom: 0.75rem !important;
+    font-size: 0.8rem !important;
+    margin: 0 auto 0.75rem auto !important;
+    text-align: center !important;
+    width: 100% !important;
   }
   .hero-ref-cards {
     width: 100% !important;
     max-width: 100% !important;
-    margin-top: 1rem !important;
+    margin: 0.75rem auto 0 auto !important;
     overflow: hidden !important;
     padding: 4px 0 !important;
   }
   .hero-cards-set {
-    gap: 0.65rem !important;
-    padding-right: 0.65rem !important;
+    gap: 0.6rem !important;
+    padding-right: 0.6rem !important;
   }
   .hero-product-card {
-    width: 168px !important;
-    min-width: 168px !important;
-    max-width: 168px !important;
-    flex: 0 0 168px !important;
-    padding: 0.6rem 0.7rem !important;
+    width: 165px !important;
+    min-width: 165px !important;
+    max-width: 165px !important;
+    flex: 0 0 165px !important;
+    padding: 0.55rem 0.65rem !important;
     border-radius: 10px !important;
   }
   .card-img-box {
-    width: 62px !important;
-    height: 62px !important;
-    padding: 4px !important;
+    width: 58px !important;
+    height: 58px !important;
+    padding: 3px !important;
     border-radius: 8px !important;
   }
   .card-name {
-    font-size: 0.75rem !important;
+    font-size: 0.74rem !important;
   }
   .card-sub {
-    font-size: 0.72rem !important;
+    font-size: 0.7rem !important;
   }
   .card-num {
-    font-size: 0.68rem !important;
+    font-size: 0.65rem !important;
   }
   .card-action-btn {
     width: 24px !important;
@@ -1130,107 +1272,115 @@ h1, h2, h3, h4, h5, h6 {
     width: 12px !important;
     height: 12px !important;
   }
-  .hero-ref-right {
-    min-height: 220px !important;
-    height: auto !important;
-    width: 100% !important;
-    max-width: 320px !important;
-    margin: 0.75rem auto 0 auto !important;
-    position: relative !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    overflow: visible !important;
-  }
-  .hero-diamond-shape {
-    width: 175px !important;
-    height: 175px !important;
-    border-radius: 26px !important;
-    box-shadow: 0 10px 30px rgba(0, 56, 102, 0.12) !important;
-  }
-  .hero-diamond-logo {
-    width: 50% !important;
-    height: 50% !important;
-    opacity: 0.12 !important;
-  }
-  .hero-machinery-img {
-    width: 100% !important;
-    max-width: 270px !important;
-    max-height: 210px !important;
-    height: auto !important;
-    object-fit: contain !important;
-    display: block !important;
-    margin: 0 auto !important;
-  }
 }
 
-@media (max-width: 480px) {
-  .hero-ref-section,
-  .page-hero-ref-section {
-    padding-top: 5.25rem !important;
-    padding-bottom: 1.75rem !important;
-  }
-  .hero-ref-title {
-    font-size: clamp(1.45rem, 6.2vw, 1.85rem) !important;
-    line-height: 1.22 !important;
-    margin-bottom: 0.75rem !important;
-  }
-  .hero-ref-desc {
-    font-size: 0.875rem !important;
-    line-height: 1.5 !important;
-    margin-bottom: 1rem !important;
-  }
+@media (max-width: 520px) {
   .hero-ref-actions {
     flex-direction: column !important;
+    align-items: stretch !important;
     width: 100% !important;
+    max-width: 310px !important;
     gap: 0.5rem !important;
   }
   .hero-ref-actions .btn-get-in-touch,
   .hero-ref-actions .btn,
   .hero-ref-actions .btn-ref-phone {
     width: 100% !important;
+    max-width: 100% !important;
     justify-content: center !important;
     text-align: center !important;
     box-sizing: border-box !important;
+    padding: 0.65rem 1rem !important;
+    font-size: 0.88rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-ref-section,
+  .page-hero-ref-section {
+    padding-top: 5rem !important;
+    padding-bottom: 1.75rem !important;
+  }
+  /* Image UP on small mobile */
+  .hero-ref-right {
+    order: 1 !important;
+    min-height: 165px !important;
+    max-height: 195px !important;
+    max-width: 260px !important;
+    margin: 0 auto 0.65rem auto !important;
+  }
+  .hero-diamond-shape {
+    width: 130px !important;
+    height: 130px !important;
+    border-radius: 18px !important;
+  }
+  .hero-machinery-img {
+    max-width: 215px !important;
+    max-height: 155px !important;
+  }
+  /* Text DOWN - Center Aligned */
+  .hero-ref-left {
+    order: 2 !important;
+    text-align: center !important;
+    align-items: center !important;
+  }
+  .hero-ref-title {
+    font-size: clamp(1.4rem, 6vw, 1.8rem) !important;
+    line-height: 1.2 !important;
+    margin: 0 auto 0.65rem auto !important;
+  }
+  .hero-ref-desc {
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+    margin: 0 auto 0.95rem auto !important;
   }
   .hero-pill-ref {
-    font-size: 0.725rem !important;
+    font-size: 0.72rem !important;
     padding: 0.25rem 0.55rem !important;
   }
   .hero-ref-cards {
-    margin-top: 0.85rem !important;
+    margin-top: 0.65rem !important;
   }
   .hero-product-card {
-    width: 152px !important;
-    min-width: 152px !important;
-    max-width: 152px !important;
-    flex: 0 0 152px !important;
-    padding: 0.5rem 0.6rem !important;
+    width: 150px !important;
+    min-width: 150px !important;
+    max-width: 150px !important;
+    flex: 0 0 150px !important;
+    padding: 0.5rem 0.55rem !important;
   }
   .card-img-box {
-    width: 50px !important;
-    height: 50px !important;
+    width: 48px !important;
+    height: 48px !important;
     padding: 3px !important;
   }
   .card-name {
-    font-size: 0.7rem !important;
-  }
-  .card-sub {
     font-size: 0.68rem !important;
   }
+  .card-sub {
+    font-size: 0.65rem !important;
+  }
+}
+
+@media (max-width: 360px) {
   .hero-ref-right {
-    min-height: 185px !important;
-    max-width: 270px !important;
-    margin: 0.5rem auto 0 auto !important;
+    min-height: 150px !important;
+    max-height: 175px !important;
+    max-width: 230px !important;
   }
   .hero-diamond-shape {
-    width: 145px !important;
-    height: 145px !important;
-    border-radius: 20px !important;
+    width: 115px !important;
+    height: 115px !important;
+    border-radius: 16px !important;
   }
   .hero-machinery-img {
-    max-width: 220px !important;
-    max-height: 175px !important;
+    max-width: 190px !important;
+    max-height: 140px !important;
+  }
+  .hero-ref-title {
+    font-size: 1.35rem !important;
+  }
+  .hero-ref-actions {
+    max-width: 100% !important;
   }
 }
 
