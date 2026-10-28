@@ -6,7 +6,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   initScrollProgress();
   initScrollReveal();
-  initBackToTop();
   initMobileDrawer();
   initStickyHeader();
   initCounters();
@@ -66,34 +65,10 @@ function initScrollReveal() {
   });
 }
 
-/* 0c. Scroll-to-Top Floating Button */
+/* 0c. Scroll-to-Top Floating Button Removed */
 function initBackToTop() {
-  if (document.getElementById('backToTopBtn')) return;
-
-  const btn = document.createElement('button');
-  btn.className = 'back-to-top-btn';
-  btn.id = 'backToTopBtn';
-  btn.title = 'Scroll to top';
-  btn.setAttribute('aria-label', 'Scroll to top');
-  btn.innerHTML = `
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-      <polyline points="18 15 12 9 6 15"></polyline>
-    </svg>
-  `;
-
-  document.body.appendChild(btn);
-
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 350) {
-      btn.classList.add('visible');
-    } else {
-      btn.classList.remove('visible');
-    }
-  }, { passive: true });
-
-  btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+  const existing = document.getElementById('backToTopBtn');
+  if (existing) existing.remove();
 }
 
 /* Hero Full HD Service Tabs Switcher */
