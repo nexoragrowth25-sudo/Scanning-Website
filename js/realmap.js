@@ -1,296 +1,345 @@
 /**
  * Sunrise Metrology Solutions Pvt. Ltd.
- * Simple Real Map Controller (Leaflet.js)
- * Clean, lightweight map focused exclusively on the two operational locations:
- * 1. Pune Head Office & Metrology Lab
- * 2. Bengaluru Regional Support Hub
+ * Authentic Google Maps Widget Controller
+ * Pure, high-performance interactive map featuring Pune (HQ) & Bengaluru (Regional Hub).
+ * Replicates Google Maps aesthetic: floating info card, red teardrop pin with label,
+ * satellite/roadmap toggle, and direct Google directions.
  */
 
 (function () {
   'use strict';
 
-  // The two core locations requested
+  // Core Location Metadata (Short & Sweet)
   var LOCATIONS = {
     pune: {
-      name: 'Pune Head Office & Inspection Lab',
-      subtitle: 'Central Metrology Operations & Calibration Center',
+      key: 'pune',
+      name: 'SUNRISE METROLOGY',
+      shortSub: 'Pimpri-Chinchwad / Chakan, Pune',
+      ratingNum: '4.9',
+      ratingCount: '(184)',
       lat: 18.5204,
       lng: 73.8567,
-      zoom: 13,
-      address: 'Pimpri-Chinchwad / Chakan Industrial Corridor, Pune, Maharashtra 411019',
-      hours: 'Mon – Sat: 8:30 AM – 7:30 PM (24/7 Emergency Onsite Dispatch)',
-      phone: '+91 9975 232 333',
-      email: 'amol.palande@sunrisemetrology.com',
-      badge: 'Head Office (Pune)',
-      gmapsUrl: 'https://www.google.com/maps/search/?api=1&query=Sunrise+Metrology+Pune+Maharashtra'
+      zoom: 12,
+      label: 'SUNRISE METROLOGY (PUNE)',
+      openUrl: 'https://www.google.com/maps/search/?api=1&query=Sunrise+Metrology+Pune',
+      dirUrl: 'https://www.google.com/maps/dir/?api=1&destination=18.5204,73.8567'
     },
     bangalore: {
-      name: 'Bengaluru Regional Support Hub',
-      subtitle: 'Aerospace, Defense & Precision Engineering Hub',
+      key: 'bangalore',
+      name: 'SUNRISE METROLOGY',
+      shortSub: 'Peenya / Whitefield, Bengaluru',
+      ratingNum: '4.9',
+      ratingCount: '(142)',
       lat: 12.9716,
       lng: 77.5946,
-      zoom: 13,
-      address: 'Peenya / Whitefield Aerospace Corridor, Bengaluru, Karnataka 560058',
-      hours: 'Mon – Sat: 8:30 AM – 7:00 PM (Aviation Rapid Dispatch)',
-      phone: '+91 9975 232 333',
-      email: 'amol.palande@sunrisemetrology.com',
-      badge: 'Regional Hub (Bengaluru)',
-      gmapsUrl: 'https://www.google.com/maps/search/?api=1&query=Sunrise+Metrology+Bengaluru+Karnataka'
+      zoom: 12,
+      label: 'SUNRISE METROLOGY (BLR)',
+      openUrl: 'https://www.google.com/maps/search/?api=1&query=Sunrise+Metrology+Bengaluru',
+      dirUrl: 'https://www.google.com/maps/dir/?api=1&destination=12.9716,77.5946'
+    },
+    both: {
+      key: 'both',
+      name: 'SUNRISE METROLOGY',
+      shortSub: 'Pune (HQ) & Bengaluru (Regional Hub)',
+      ratingNum: '4.9',
+      ratingCount: '(326)',
+      center: [15.65, 75.8],
+      zoom: 6,
+      label: 'SUNRISE METROLOGY',
+      openUrl: 'https://www.google.com/maps/search/?api=1&query=Sunrise+Metrology',
+      dirUrl: 'https://www.google.com/maps/search/?api=1&query=Sunrise+Metrology'
     }
   };
 
-  // Center coordinate between Pune and Bangalore to show both
-  var BOTH_VIEW = {
-    lat: 15.65,
-    lng: 75.8,
-    zoom: 6
-  };
+  // Google Maps Tile URLs
+  var TILE_ROADMAP = 'https://mt{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}';
+  var TILE_SATELLITE = 'https://mt{s}.google.com/vt/lyrs=y&x={x}&y={y}&z={z}';
+  var TILE_OSM_FALLBACK = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 
-  // Custom Pulsing Pin Marker
-  function createPulseIcon(color, label) {
+  // Create Authentic Red Google Marker with text label beside it
+  function createGooglePinIcon(labelText) {
     if (typeof L === 'undefined') return null;
     return L.divIcon({
-      className: 'custom-pulse-marker',
-      html: '<div class="pulse-marker-wrapper">' +
-              '<div class="pulse-ring" style="border-color: ' + color + '; background-color: ' + color + '22;"></div>' +
-              '<div class="pulse-dot" style="background-color: ' + color + ';">' +
-                '<svg viewBox="0 0 24 24" width="14" height="14" fill="#ffffff"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>' +
+      className: 'gmaps-marker-pin-wrapper',
+      html: '<div class="gmaps-pin-flex">' +
+              '<div class="gmaps-pin-teardrop">' +
+                '<svg viewBox="0 0 27 43" width="27" height="43">' +
+                  '<path fill="#EA4335" d="M13.5 0C6.04 0 0 6.04 0 13.5C0 23.63 13.5 43 13.5 43S27 23.63 27 13.5C27 6.04 20.96 0 13.5 0Z"/>' +
+                  '<circle fill="#B31412" cx="13.5" cy="13.5" r="5.5"/>' +
+                  '<circle fill="#FFFFFF" cx="13.5" cy="13.5" r="4.2"/>' +
+                '</svg>' +
               '</div>' +
-              (label ? '<span class="pulse-label">' + label + '</span>' : '') +
+              '<div class="gmaps-pin-text-label">' + (labelText || 'SUNRISE METROLOGY') + '</div>' +
             '</div>',
-      iconSize: [36, 36],
-      iconAnchor: [18, 18],
-      popupAnchor: [0, -20]
+      iconSize: [220, 43],
+      iconAnchor: [13.5, 43],
+      popupAnchor: [0, -42]
     });
   }
 
-  // Clean Simple Popup Content
-  function createPopupContent(loc) {
-    return '<div class="map-popup-card">' +
-             '<div class="popup-badge">' + loc.badge + '</div>' +
-             '<h4 class="popup-title">' + loc.name + '</h4>' +
-             '<p class="popup-subtitle">' + loc.subtitle + '</p>' +
-             '<p class="popup-address"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg> ' + loc.address + '</p>' +
-             '<p class="popup-hours"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg> ' + loc.hours + '</p>' +
-             '<div class="popup-actions">' +
-               '<a href="' + loc.gmapsUrl + '" target="_blank" rel="noopener" class="popup-btn-primary">' +
-                 '<span>Open Google Maps</span>' +
-                 '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>' +
-               '</a>' +
-               '<a href="tel:+919975232333" class="popup-btn-secondary">' +
-                 '<span>Call +91 9975 232 333</span>' +
-               '</a>' +
-             '</div>' +
-           '</div>';
+  // Helper to create tile layer
+  function createTileLayer(url) {
+    return L.tileLayer(url, {
+      subdomains: ['0', '1', '2', '3'],
+      maxZoom: 20,
+      attribution: 'Google Maps'
+    });
   }
 
-  // 1. Initialize Contact Main Map (Simple Regular Default View: Pune & Bengaluru)
+  // =========================================================================
+  // 1. CONTACT MAIN GOOGLE MAP
+  // =========================================================================
   function initContactMainMap() {
     var mapEl = document.getElementById('contact-main-map');
     if (!mapEl || typeof L === 'undefined') return;
+
+    var roadmapLayer = createTileLayer(TILE_ROADMAP);
+    var satelliteLayer = createTileLayer(TILE_SATELLITE);
+
+    var map = L.map('contact-main-map', {
+      center: [LOCATIONS.pune.lat, LOCATIONS.pune.lng],
+      zoom: LOCATIONS.pune.zoom,
+      scrollWheelZoom: false,
+      zoomControl: false
+    });
+
+    // Add zoom control at bottom-right (Google Maps style)
+    L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+    // Initial layer
+    roadmapLayer.addTo(map);
+    var currentMode = 'roadmap';
+
+    // Add Red Google Pins
+    var puneMarker = L.marker([LOCATIONS.pune.lat, LOCATIONS.pune.lng], {
+      icon: createGooglePinIcon('SUNRISE METROLOGY (PUNE)')
+    }).addTo(map);
+
+    var blrMarker = L.marker([LOCATIONS.bangalore.lat, LOCATIONS.bangalore.lng], {
+      icon: createGooglePinIcon('SUNRISE METROLOGY (BENGALURU)')
+    }).addTo(map);
+
+    // Bounds for framing both cities
+    var bothBounds = L.latLngBounds([
+      [LOCATIONS.pune.lat, LOCATIONS.pune.lng],
+      [LOCATIONS.bangalore.lat, LOCATIONS.bangalore.lng]
+    ]);
+
+    // Update Floating Info Card
+    function updateCard(cityKey) {
+      var data = LOCATIONS[cityKey] || LOCATIONS.pune;
+      var titleEl = document.getElementById('contact-card-title');
+      var subEl = document.getElementById('contact-card-sub');
+      var countEl = document.getElementById('contact-card-count');
+      var openEl = document.getElementById('contact-card-open');
+      var dirEl = document.getElementById('contact-card-dir');
+
+      if (titleEl) titleEl.textContent = data.name;
+      if (subEl) subEl.textContent = data.shortSub;
+      if (countEl) countEl.textContent = data.ratingCount;
+      if (openEl) openEl.href = data.openUrl;
+      if (dirEl) dirEl.href = data.dirUrl;
+
+      // Update City Selector Tabs
+      var tabs = document.querySelectorAll('[data-gmap-city]');
+      tabs.forEach(function (tab) {
+        if (tab.getAttribute('data-gmap-city') === cityKey) {
+          tab.classList.add('active');
+        } else {
+          tab.classList.remove('active');
+        }
+      });
+    }
+
+    // Set City on Map
+    function selectCity(cityKey) {
+      updateCard(cityKey);
+
+      if (cityKey === 'both') {
+        map.fitBounds(bothBounds, { padding: [60, 60], maxZoom: 7 });
+      } else if (LOCATIONS[cityKey]) {
+        var loc = LOCATIONS[cityKey];
+        map.flyTo([loc.lat, loc.lng], loc.zoom, { duration: 1 });
+      }
+    }
+
+    // Tab Clicks
+    var tabs = document.querySelectorAll('[data-gmap-city]');
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var key = tab.getAttribute('data-gmap-city');
+        selectCity(key);
+      });
+    });
+
+    // Marker Clicks
+    puneMarker.on('click', function () {
+      selectCity('pune');
+    });
+
+    blrMarker.on('click', function () {
+      selectCity('bangalore');
+    });
+
+    // Layer Toggle (Roadmap <-> Satellite)
+    var toggleBtn = document.getElementById('contact-layer-toggle');
+    var toggleImg = document.getElementById('contact-layer-img');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', function () {
+        if (currentMode === 'roadmap') {
+          map.removeLayer(roadmapLayer);
+          satelliteLayer.addTo(map);
+          currentMode = 'satellite';
+          if (toggleImg) toggleImg.src = 'images/gmaps-roadmap-thumb.png';
+          toggleBtn.title = 'Switch to Map View';
+        } else {
+          map.removeLayer(satelliteLayer);
+          roadmapLayer.addTo(map);
+          currentMode = 'roadmap';
+          if (toggleImg) toggleImg.src = 'images/gmaps-satellite-thumb.jpg';
+          toggleBtn.title = 'Switch to Satellite View';
+        }
+      });
+    }
+
+    // Fullscreen Toggle
+    var fsBtn = document.getElementById('contact-gmaps-fullscreen');
+    var stageEl = document.getElementById('gmaps-stage-contact');
+    if (fsBtn && stageEl) {
+      fsBtn.addEventListener('click', function () {
+        if (!document.fullscreenElement) {
+          if (stageEl.requestFullscreen) stageEl.requestFullscreen();
+          else if (stageEl.webkitRequestFullscreen) stageEl.webkitRequestFullscreen();
+        } else {
+          if (document.exitFullscreen) document.exitFullscreen();
+          else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+        }
+      });
+    }
+
+    window.addEventListener('resize', function () {
+      map.invalidateSize();
+    });
+
+    // Initialize Card with default 'pune'
+    updateCard('pune');
+  }
+
+  // =========================================================================
+  // 2. ABOUT PAGE GOOGLE MAP
+  // =========================================================================
+  function initAboutMap() {
+    var aboutMapEl = document.getElementById('about-map-view');
+    if (!aboutMapEl || typeof L === 'undefined') return;
+
+    var roadmapLayer = createTileLayer(TILE_ROADMAP);
+    var satelliteLayer = createTileLayer(TILE_SATELLITE);
+
+    var aboutMap = L.map('about-map-view', {
+      center: [LOCATIONS.pune.lat, LOCATIONS.pune.lng],
+      zoom: LOCATIONS.pune.zoom,
+      scrollWheelZoom: false,
+      zoomControl: false
+    });
+
+    L.control.zoom({ position: 'bottomright' }).addTo(aboutMap);
+    roadmapLayer.addTo(aboutMap);
+    var currentMode = 'roadmap';
+
+    var pMarker = L.marker([LOCATIONS.pune.lat, LOCATIONS.pune.lng], {
+      icon: createGooglePinIcon('SUNRISE METROLOGY (PUNE)')
+    }).addTo(aboutMap);
+
+    var bMarker = L.marker([LOCATIONS.bangalore.lat, LOCATIONS.bangalore.lng], {
+      icon: createGooglePinIcon('SUNRISE METROLOGY (BLR)')
+    }).addTo(aboutMap);
 
     var bothBounds = L.latLngBounds([
       [LOCATIONS.pune.lat, LOCATIONS.pune.lng],
       [LOCATIONS.bangalore.lat, LOCATIONS.bangalore.lng]
     ]);
 
-    var map = L.map('contact-main-map', {
-      center: [BOTH_VIEW.lat, BOTH_VIEW.lng],
-      zoom: BOTH_VIEW.zoom,
-      scrollWheelZoom: false
-    });
+    function updateAboutCard(cityKey) {
+      var data = LOCATIONS[cityKey] || LOCATIONS.pune;
+      var titleEl = document.getElementById('about-card-title');
+      var subEl = document.getElementById('about-card-sub');
+      var countEl = document.getElementById('about-card-count');
+      var openEl = document.getElementById('about-card-open');
+      var dirEl = document.getElementById('about-card-dir');
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-    }).addTo(map);
+      if (titleEl) titleEl.textContent = data.name;
+      if (subEl) subEl.textContent = data.shortSub;
+      if (countEl) countEl.textContent = data.ratingCount;
+      if (openEl) openEl.href = data.openUrl;
+      if (dirEl) dirEl.href = data.dirUrl;
 
-    // Marker 1: Pune
-    var puneMarker = L.marker([LOCATIONS.pune.lat, LOCATIONS.pune.lng], {
-      icon: createPulseIcon('#1c8cc4', 'Pune HQ')
-    }).addTo(map);
-    puneMarker.bindPopup(createPopupContent(LOCATIONS.pune));
-
-    // Marker 2: Bangalore
-    var bangaloreMarker = L.marker([LOCATIONS.bangalore.lat, LOCATIONS.bangalore.lng], {
-      icon: createPulseIcon('#fe6911', 'Bengaluru Hub')
-    }).addTo(map);
-    bangaloreMarker.bindPopup(createPopupContent(LOCATIONS.bangalore));
-
-    // Default regular view: Frame both Pune and Bengaluru cleanly
-    map.fitBounds(bothBounds, { padding: [50, 50], maxZoom: 7 });
-
-    // 2-City Switcher + Both Button Helper
-    function setActiveCity(cityKey) {
-      var allTargets = document.querySelectorAll('[data-map-city]');
-      allTargets.forEach(function (b) {
-        if (b.getAttribute('data-map-city') === cityKey) {
-          b.classList.add('active');
+      var btns = document.querySelectorAll('[data-about-city]');
+      btns.forEach(function (btn) {
+        if (btn.getAttribute('data-about-city') === cityKey) {
+          btn.classList.add('active');
         } else {
-          b.classList.remove('active');
+          btn.classList.remove('active');
         }
       });
     }
 
-    var cityElements = document.querySelectorAll('[data-map-city]');
-    cityElements.forEach(function (el) {
-      el.addEventListener('click', function (e) {
-        // If clicking a link inside, allow standard link navigation
-        if (e.target.closest('a')) return;
+    function selectAboutCity(cityKey) {
+      updateAboutCard(cityKey);
 
-        var cityKey = el.getAttribute('data-map-city');
-        setActiveCity(cityKey);
-
-        if (cityKey === 'both') {
-          map.fitBounds(bothBounds, { padding: [50, 50], maxZoom: 7 });
-        } else if (LOCATIONS[cityKey]) {
-          var loc = LOCATIONS[cityKey];
-          map.flyTo([loc.lat, loc.lng], loc.zoom, { duration: 1 });
-          setTimeout(function() {
-            if (cityKey === 'pune') puneMarker.openPopup();
-            else if (cityKey === 'bangalore') bangaloreMarker.openPopup();
-          }, 1050);
-        }
-      });
-
-      // Keyboard accessible
-      el.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          if (e.target.tagName !== 'A' && e.target.tagName !== 'BUTTON') {
-            e.preventDefault();
-            el.click();
-          }
-        }
-      });
-    });
-
-    // Clicking map markers syncs the facility card selection
-    puneMarker.on('click', function () {
-      setActiveCity('pune');
-    });
-
-    bangaloreMarker.on('click', function () {
-      setActiveCity('bangalore');
-    });
-
-    window.addEventListener('resize', function () {
-      map.invalidateSize();
-    });
-  }
-
-  // 2. Initialize Contact Sidebar Mini Map
-  function initContactSidebarMap() {
-    var sidebarMapEl = document.getElementById('contact-sidebar-map');
-    if (!sidebarMapEl || typeof L === 'undefined') return;
-
-    var miniMap = L.map('contact-sidebar-map', {
-      center: [BOTH_VIEW.lat, BOTH_VIEW.lng],
-      zoom: BOTH_VIEW.zoom,
-      scrollWheelZoom: false,
-      zoomControl: false
-    });
-
-    L.control.zoom({ position: 'bottomright' }).addTo(miniMap);
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '&copy; OSM'
-    }).addTo(miniMap);
-
-    var sPuneMarker = L.marker([LOCATIONS.pune.lat, LOCATIONS.pune.lng], {
-      icon: createPulseIcon('#1c8cc4', 'Pune HQ')
-    }).addTo(miniMap);
-    sPuneMarker.bindPopup(createPopupContent(LOCATIONS.pune));
-
-    var sBlrMarker = L.marker([LOCATIONS.bangalore.lat, LOCATIONS.bangalore.lng], {
-      icon: createPulseIcon('#fe6911', 'BLR')
-    }).addTo(miniMap);
-    sBlrMarker.bindPopup(createPopupContent(LOCATIONS.bangalore));
-
-    var miniBounds = L.latLngBounds([
-      [LOCATIONS.pune.lat, LOCATIONS.pune.lng],
-      [LOCATIONS.bangalore.lat, LOCATIONS.bangalore.lng]
-    ]);
-    miniMap.fitBounds(miniBounds, { padding: [30, 30], maxZoom: 6 });
-
-    var sideBtns = document.querySelectorAll('[data-sidebar-city]');
-    sideBtns.forEach(function(b) {
-      b.addEventListener('click', function() {
-        sideBtns.forEach(function(x) { x.classList.remove('active'); });
-        b.classList.add('active');
-        var cityKey = b.getAttribute('data-sidebar-city');
-        if (cityKey === 'both') {
-          miniMap.fitBounds(miniBounds, { padding: [30, 30], maxZoom: 6 });
-        } else if (LOCATIONS[cityKey]) {
-          var loc = LOCATIONS[cityKey];
-          miniMap.flyTo([loc.lat, loc.lng], 12, { duration: 0.9 });
-          setTimeout(function() {
-            if (cityKey === 'pune') sPuneMarker.openPopup();
-            else if (cityKey === 'bangalore') sBlrMarker.openPopup();
-          }, 950);
-        }
-      });
-    });
-  }
-
-  // 3. Initialize About Page Simple Regular Map (Pune and Bangalore)
-  function initAboutMap() {
-    var aboutMapEl = document.getElementById('about-map-view');
-    if (!aboutMapEl || typeof L === 'undefined') return;
-
-    var aboutBounds = L.latLngBounds([
-      [LOCATIONS.pune.lat, LOCATIONS.pune.lng],
-      [LOCATIONS.bangalore.lat, LOCATIONS.bangalore.lng]
-    ]);
-
-    var aboutMap = L.map('about-map-view', {
-      center: [BOTH_VIEW.lat, BOTH_VIEW.lng],
-      zoom: BOTH_VIEW.zoom,
-      scrollWheelZoom: false
-    });
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '&copy; OpenStreetMap'
-    }).addTo(aboutMap);
-
-    var pMarker = L.marker([LOCATIONS.pune.lat, LOCATIONS.pune.lng], {
-      icon: createPulseIcon('#1c8cc4', 'Pune HQ')
-    }).addTo(aboutMap);
-    pMarker.bindPopup(createPopupContent(LOCATIONS.pune));
-
-    var bMarker = L.marker([LOCATIONS.bangalore.lat, LOCATIONS.bangalore.lng], {
-      icon: createPulseIcon('#fe6911', 'Bengaluru Hub')
-    }).addTo(aboutMap);
-    bMarker.bindPopup(createPopupContent(LOCATIONS.bangalore));
-
-    // Default regular view: Frame both Pune and Bengaluru cleanly
-    aboutMap.fitBounds(aboutBounds, { padding: [40, 40], maxZoom: 7 });
+      if (cityKey === 'both') {
+        aboutMap.fitBounds(bothBounds, { padding: [40, 40], maxZoom: 7 });
+      } else if (LOCATIONS[cityKey]) {
+        var loc = LOCATIONS[cityKey];
+        aboutMap.flyTo([loc.lat, loc.lng], loc.zoom, { duration: 1 });
+      }
+    }
 
     var aboutBtns = document.querySelectorAll('[data-about-city]');
-    aboutBtns.forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        aboutBtns.forEach(function(x) { x.classList.remove('active'); });
-        btn.classList.add('active');
-        var cityKey = btn.getAttribute('data-about-city');
-        if (cityKey === 'both') {
-          aboutMap.fitBounds(aboutBounds, { padding: [40, 40], maxZoom: 7 });
-        } else if (LOCATIONS[cityKey]) {
-          var loc = LOCATIONS[cityKey];
-          aboutMap.flyTo([loc.lat, loc.lng], loc.zoom, { duration: 1 });
-          setTimeout(function() {
-            if (cityKey === 'pune') pMarker.openPopup();
-            else if (cityKey === 'bangalore') bMarker.openPopup();
-          }, 1050);
-        }
+    aboutBtns.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var key = btn.getAttribute('data-about-city');
+        selectAboutCity(key);
       });
     });
+
+    pMarker.on('click', function () {
+      selectAboutCity('pune');
+    });
+
+    bMarker.on('click', function () {
+      selectAboutCity('bangalore');
+    });
+
+    var toggleBtn = document.getElementById('about-layer-toggle');
+    var toggleImg = document.getElementById('about-layer-img');
+    if (toggleBtn) {
+      toggleBtn.addEventListener('click', function () {
+        if (currentMode === 'roadmap') {
+          aboutMap.removeLayer(roadmapLayer);
+          satelliteLayer.addTo(aboutMap);
+          currentMode = 'satellite';
+          if (toggleImg) toggleImg.src = 'images/gmaps-roadmap-thumb.png';
+          toggleBtn.title = 'Switch to Map View';
+        } else {
+          aboutMap.removeLayer(satelliteLayer);
+          roadmapLayer.addTo(aboutMap);
+          currentMode = 'roadmap';
+          if (toggleImg) toggleImg.src = 'images/gmaps-satellite-thumb.jpg';
+          toggleBtn.title = 'Switch to Satellite View';
+        }
+      });
+    }
+
+    window.addEventListener('resize', function () {
+      aboutMap.invalidateSize();
+    });
+
+    updateAboutCard('pune');
   }
 
   // Boot on DOM ready
   document.addEventListener('DOMContentLoaded', function () {
     initContactMainMap();
-    initContactSidebarMap();
     initAboutMap();
   });
 

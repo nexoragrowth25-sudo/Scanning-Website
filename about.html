@@ -285,31 +285,59 @@
     <div class="container">
       <div style="display:grid; grid-template-columns: 1fr; gap:3rem; align-items:center;" class="lg-grid-2">
         <div>
-          <div class="real-map-wrapper">
-            <!-- Simple 2-City Map Header -->
-            <div class="map-control-header" style="padding:0.75rem 1rem;">
-              <div class="map-city-tabs">
-                <button type="button" class="map-city-btn active" data-about-city="both" style="padding:0.35rem 0.85rem; font-size:0.8rem;">
-                  <span>🗺️ Regular View (Both Locations)</span>
-                </button>
-                <button type="button" class="map-city-btn" data-about-city="pune" style="padding:0.35rem 0.85rem; font-size:0.8rem;">
-                  <span>📍 Pune Head Office</span>
-                </button>
-                <button type="button" class="map-city-btn" data-about-city="bangalore" style="padding:0.35rem 0.85rem; font-size:0.8rem;">
-                  <span>📍 Bengaluru Hub</span>
-                </button>
-              </div>
+          <div class="gmaps-widget-container">
+            <!-- City Selector Tabs -->
+            <div class="gmaps-city-selector" style="justify-content:flex-start; margin-bottom:0.75rem;">
+              <button type="button" class="gmaps-city-tab active" data-about-city="pune" style="padding:0.4rem 0.85rem; font-size:0.8rem;">
+                <span>📍 Pune (HQ)</span>
+              </button>
+              <button type="button" class="gmaps-city-tab" data-about-city="bangalore" style="padding:0.4rem 0.85rem; font-size:0.8rem;">
+                <span>📍 Bengaluru Hub</span>
+              </button>
+              <button type="button" class="gmaps-city-tab" data-about-city="both" style="padding:0.4rem 0.85rem; font-size:0.8rem;">
+                <span>🗺️ Both Hubs</span>
+              </button>
             </div>
-            <!-- Real Leaflet Map Canvas -->
-            <div id="about-map-view" class="real-map-container" style="height:380px;"></div>
-            <!-- Bottom Indicator Strip -->
-            <div style="background:#f8fafc; padding:0.75rem 1rem; border-top:1px solid var(--color-neutral-200); display:flex; justify-content:space-between; align-items:center;">
-              <span style="font-size:0.75rem; font-weight:600; color:var(--color-primary-700); display:flex; align-items:center; gap:6px;">
-                <span class="map-live-pulse-dot" style="width:7px; height:7px;"></span> Live Interactive Map • Zoom & Pan
-              </span>
-              <a href="contact.html#facility-map-section" style="font-size:0.75rem; font-weight:600; color:var(--color-secondary-600);">
-                Full Map & Directions →
-              </a>
+
+            <!-- Google Maps Stage Box -->
+            <div class="gmaps-map-stage" id="gmaps-stage-about" style="height:420px;">
+              <!-- Floating White Info Card -->
+              <div class="gmaps-floating-card" id="about-gmaps-card" style="max-width:280px; padding:12px 14px;">
+                <h3 class="gmaps-card-title" id="about-card-title" style="font-size:0.88rem;">SUNRISE METROLOGY</h3>
+                <p class="gmaps-card-sub" id="about-card-sub" style="font-size:0.75rem; margin-bottom:5px;">Pimpri-Chinchwad, Pune</p>
+                <div class="gmaps-card-rating" style="margin-bottom:8px; font-size:0.78rem;">
+                  <span class="rating-num">4.9</span>
+                  <span class="rating-star">★</span>
+                  <span class="rating-count" id="about-card-count">(184)</span>
+                  <span class="rating-info-icon">ⓘ</span>
+                </div>
+                <div class="gmaps-card-actions">
+                  <a href="https://www.google.com/maps/search/?api=1&query=Sunrise+Metrology+Pune" target="_blank" rel="noopener" id="about-card-open" class="gmaps-btn-open" style="padding:5px 12px; font-size:0.75rem;">
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                    <span>Open in Maps</span>
+                  </a>
+                  <a href="https://www.google.com/maps/dir/?api=1&destination=18.5204,73.8567" target="_blank" rel="noopener" id="about-card-dir" class="gmaps-btn-directions" style="width:28px; height:28px;" title="Directions">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M22.43 10.57L13.43 1.57c-.78-.78-2.05-.78-2.83 0L1.57 10.57c-.78.78-.78 2.05 0 2.83l9.03 9.03c.78.78 2.05.78 2.83 0l9-9c.78-.78.78-2.05 0-2.86zM14 14.5V12h-4v3H8v-4c0-.55.45-1 1-1h5V7.5l3.5 3.5-3.5 3.5z"/></svg>
+                  </a>
+                </div>
+              </div>
+
+              <!-- Google Maps Tile Canvas -->
+              <div id="about-map-view" class="gmaps-canvas"></div>
+
+              <!-- Bottom-Left Satellite Layer Toggle -->
+              <button type="button" class="gmaps-layer-toggle" id="about-layer-toggle" title="Toggle Satellite View" aria-label="Toggle Satellite View">
+                <img src="images/gmaps-satellite-thumb.jpg" alt="Satellite" id="about-layer-img" />
+              </button>
+
+              <!-- Bottom Google Bar -->
+              <div class="gmaps-bottom-bar">
+                <div class="gmaps-legal-links">
+                  <span>Map data ©2026 Google</span>
+                  <a href="https://www.google.com/help/terms_maps/" target="_blank" rel="noopener">Terms</a>
+                </div>
+                <a href="contact.html#facility-map-section" style="color:#1a73e8; font-weight:600; text-decoration:none;">Full Map →</a>
+              </div>
             </div>
           </div>
         </div>

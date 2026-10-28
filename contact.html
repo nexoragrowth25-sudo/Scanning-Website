@@ -390,117 +390,83 @@
     </div>
   </section>
 
-  <!-- Simple Facility & Location Map Section: Pune & Bengaluru -->
+  <!-- Authentic Google Maps Section: Pune & Bengaluru -->
   <section class="section section-bg-light" id="facility-map-section" style="padding-top:2.5rem; padding-bottom:3.5rem;">
     <div class="container">
-      <div class="section-header" style="max-width:760px; margin-bottom:2rem;">
-        <span class="section-tag">Facility Locations</span>
-        <h2 class="text-h2 section-title">Our Facilities in Pune &amp; Bengaluru</h2>
+      <div class="section-header" style="max-width:760px; margin-bottom:1.75rem;">
+        <span class="section-tag">Locations</span>
+        <h2 class="text-h2 section-title">Our Hubs in Pune &amp; Bengaluru</h2>
         <p class="section-desc">
-          Click either facility card below to inspect its exact location on the live map, review equipment capabilities, or get instant driving directions.
+          Direct Google Maps view of our two primary metrology centers in India. Click to switch locations or get directions.
         </p>
       </div>
 
-      <!-- Simple 2-Card Facility Selector -->
-      <div class="simple-facility-grid">
-        <!-- Facility 1: Pune -->
-        <div class="simple-facility-card" data-map-city="pune" role="button" tabindex="0" aria-label="Select Pune Head Office on map">
-          <div class="facility-card-top">
-            <span class="facility-badge pune">Head Office &amp; Central Lab</span>
-            <span class="facility-active-indicator">
-              <span class="map-live-pulse-dot" style="width:8px; height:8px; box-shadow:none;"></span>
-              Pune HQ
-            </span>
+      <div class="gmaps-widget-container">
+        <!-- City Selector Pill Tabs -->
+        <div class="gmaps-city-selector">
+          <button type="button" class="gmaps-city-tab active" data-gmap-city="pune" aria-label="Select Pune Headquarters">
+            <span>📍 Pune (Headquarters)</span>
+          </button>
+          <button type="button" class="gmaps-city-tab" data-gmap-city="bangalore" aria-label="Select Bengaluru Regional Hub">
+            <span>📍 Bengaluru (Regional Hub)</span>
+          </button>
+          <button type="button" class="gmaps-city-tab" data-gmap-city="both" aria-label="Show Both Locations">
+            <span>🗺️ Both Locations</span>
+          </button>
+        </div>
+
+        <!-- Google Maps Stage Box -->
+        <div class="gmaps-map-stage" id="gmaps-stage-contact">
+          <!-- Floating White Info Card (Screenshot Exact Layout) -->
+          <div class="gmaps-floating-card" id="contact-gmaps-card">
+            <h3 class="gmaps-card-title" id="contact-card-title">SUNRISE METROLOGY</h3>
+            <p class="gmaps-card-sub" id="contact-card-sub">Pimpri-Chinchwad / Chakan, Pune</p>
+            <div class="gmaps-card-rating">
+              <span class="rating-num">4.9</span>
+              <span class="rating-star">★</span>
+              <span class="rating-count" id="contact-card-count">(184)</span>
+              <span class="rating-info-icon" title="Google Verified Business">ⓘ</span>
+            </div>
+            <div class="gmaps-card-actions">
+              <a href="https://www.google.com/maps/search/?api=1&query=Sunrise+Metrology+Pune" target="_blank" rel="noopener" id="contact-card-open" class="gmaps-btn-open">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span>Open in Maps</span>
+              </a>
+              <a href="https://www.google.com/maps/dir/?api=1&destination=18.5204,73.8567" target="_blank" rel="noopener" id="contact-card-dir" class="gmaps-btn-directions" title="Directions">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M22.43 10.57L13.43 1.57c-.78-.78-2.05-.78-2.83 0L1.57 10.57c-.78.78-.78 2.05 0 2.83l9.03 9.03c.78.78 2.05.78 2.83 0l9-9c.78-.78.78-2.05 0-2.86zM14 14.5V12h-4v3H8v-4c0-.55.45-1 1-1h5V7.5l3.5 3.5-3.5 3.5z"/></svg>
+              </a>
+            </div>
           </div>
-          <h3 class="facility-card-title">🏢 Pune Inspection &amp; Metrology Center</h3>
-          <p class="facility-card-address">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            <span>Pimpri-Chinchwad / Chakan Industrial Corridor, Pune, Maharashtra 411019, India</span>
-          </p>
-          <div class="facility-card-contact">
-            <div><strong>Direct:</strong> +91 9975 232 333 &nbsp;|&nbsp; amol.palande@sunrisemetrology.com</div>
-            <div><strong>Operating Hours:</strong> Mon – Sat, 8:30 AM – 7:30 PM (24/7 Emergency Dispatch)</div>
-          </div>
-          <div class="facility-card-capabilities">
-            <span class="cap-pill">AutoScan Inspec2 Lab</span>
-            <span class="cap-pill">Grade-00 Granite Tables</span>
-            <span class="cap-pill">FARO Arm Station</span>
-            <span class="cap-pill">Parametric CAD Modeling</span>
-          </div>
-          <div class="facility-card-actions">
-            <span class="btn-select-map">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
-              Focus on Map
-            </span>
-            <a href="https://www.google.com/maps/search/?api=1&query=Sunrise+Metrology+Pune+Maharashtra" target="_blank" rel="noopener" class="btn-gmaps" onclick="event.stopPropagation();">
-              <span>Directions via Google Maps</span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            </a>
+
+          <!-- Google Maps Tile Canvas -->
+          <div id="contact-main-map" class="gmaps-canvas"></div>
+
+          <!-- Bottom-Left Satellite Layer Toggle -->
+          <button type="button" class="gmaps-layer-toggle" id="contact-layer-toggle" title="Toggle Satellite View" aria-label="Toggle Satellite View">
+            <img src="images/gmaps-satellite-thumb.jpg" alt="Satellite" id="contact-layer-img" />
+          </button>
+
+          <!-- Bottom Google Bar & Attribution -->
+          <div class="gmaps-bottom-bar">
+            <div class="gmaps-legal-links">
+              <span>Keyboard shortcuts</span>
+              <span>Map data ©2026 Google</span>
+              <a href="https://www.google.com/help/terms_maps/" target="_blank" rel="noopener">Terms</a>
+              <a href="https://www.google.com/maps" target="_blank" rel="noopener">Report a map error</a>
+            </div>
+            <button type="button" class="gmaps-fullscreen-btn" id="contact-gmaps-fullscreen" title="Toggle Fullscreen" aria-label="Toggle Fullscreen">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+            </button>
           </div>
         </div>
 
-        <!-- Facility 2: Bengaluru -->
-        <div class="simple-facility-card" data-map-city="bangalore" role="button" tabindex="0" aria-label="Select Bengaluru Regional Hub on map">
-          <div class="facility-card-top">
-            <span class="facility-badge blr">Regional Support Hub</span>
-            <span class="facility-active-indicator">
-              <span class="map-live-pulse-dot" style="width:8px; height:8px; box-shadow:none; background:#fe6911;"></span>
-              Bengaluru Hub
-            </span>
-          </div>
-          <h3 class="facility-card-title">🚀 Bengaluru Aerospace &amp; Defense Hub</h3>
-          <p class="facility-card-address">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-            <span>Peenya / Whitefield Aerospace Corridor, Bengaluru, Karnataka 560058, India</span>
-          </p>
-          <div class="facility-card-contact">
-            <div><strong>Direct:</strong> +91 9975 232 333 &nbsp;|&nbsp; amol.palande@sunrisemetrology.com</div>
-            <div><strong>Operating Hours:</strong> Mon – Sat, 8:30 AM – 7:00 PM (Aviation Rapid Dispatch)</div>
-          </div>
-          <div class="facility-card-capabilities">
-            <span class="cap-pill">Leica 80m Laser Tracker</span>
-            <span class="cap-pill">NimbleTrack Wireless Scanner</span>
-            <span class="cap-pill">Aerospace Tooling Verification</span>
-            <span class="cap-pill">Jig &amp; Fixture Alignment</span>
-          </div>
-          <div class="facility-card-actions">
-            <span class="btn-select-map">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
-              Focus on Map
-            </span>
-            <a href="https://www.google.com/maps/search/?api=1&query=Sunrise+Metrology+Bengaluru+Karnataka" target="_blank" rel="noopener" class="btn-gmaps" onclick="event.stopPropagation();">
-              <span>Directions via Google Maps</span>
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-            </a>
-          </div>
+        <!-- Short & Sweet Footer Note -->
+        <div class="gmaps-footer-note">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>
+            <strong>Onsite Plant Dispatch:</strong> Direct deployment of certified 3D scanning specialists from Pune and Bengaluru to your manufacturing plant across India.
+          </span>
         </div>
-      </div>
-
-      <!-- Clean Map Toolbar -->
-      <div class="simple-map-toolbar">
-        <div style="display:flex; align-items:center; gap:8px;">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary-600)" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
-          <span style="font-weight:600; color:var(--color-neutral-800);">Real Interactive Map</span>
-          <span style="color:var(--color-neutral-500); font-size:0.8rem;">(Showing Pune &amp; Bengaluru Facilities)</span>
-        </div>
-        <button type="button" class="btn-view-both active" data-map-city="both" aria-label="Default regular view showing both Pune and Bengaluru on map">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
-          <span>Regular View (Both Locations)</span>
-        </button>
-      </div>
-      </div>
-
-      <!-- Unobstructed Map Box -->
-      <div class="simple-map-box">
-        <div id="contact-main-map" class="simple-map-canvas"></div>
-      </div>
-
-      <!-- Clean Footer Dispatch Note -->
-      <div class="simple-map-footer-note">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-        <span>
-          <strong>Onsite Plant Dispatch:</strong> In addition to our laboratory services in Pune &amp; Bengaluru, our certified metrologists deploy portable 3D scanners, FARO arms, and laser trackers directly to your manufacturing plant anywhere in India within 12–24 hours.
-        </span>
       </div>
     </div>
   </section>
