@@ -611,6 +611,7 @@ h1, h2, h3, h4, h5, h6 {
 .hero-ref-section,
 .page-hero-ref-section {
   position: relative;
+  background-color: #ffffff;
   background-image: url('../images/Hero-bg.png');
   background-size: cover;
   background-position: center right;
