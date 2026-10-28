@@ -2571,34 +2571,55 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cta-card-icon {
-  width: 44px;
-  height: 44px;
-  border-radius: var(--radius-md);
-  background: var(--color-secondary-400);
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-lg);
+  background: #ffffff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
+  border: 2px solid rgba(255, 255, 255, 0.95);
   display: flex;
   align-items: center;
   justify-content: center;
-  shrink: 0;
+  flex-shrink: 0;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .cta-card-icon img {
-  width: 22px;
-  height: 22px;
+  width: 26px;
+  height: 26px;
   object-fit: contain;
+}
+
+.cta-card-icon svg {
+  stroke: #fe6911;
+  transition: transform 0.25s ease;
+}
+
+.cta-contact-card:hover .cta-card-icon {
+  transform: scale(1.08);
+  box-shadow: 0 10px 24px rgba(254, 105, 17, 0.45);
+  border-color: #ffffff;
+}
+
+.cta-contact-card:hover .cta-card-icon svg {
+  transform: scale(1.1);
 }
 
 .cta-card-info p:first-child {
   font-size: 0.775rem;
-  color: rgba(255, 255, 255, 0.65);
+  color: rgba(255, 255, 255, 0.75);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  margin-bottom: 2px;
 }
 
 .cta-card-info p:last-child {
   font-family: var(--font-heading);
-  font-size: 1.1rem;
+  font-size: 1.08rem;
   font-weight: 700;
   color: #ffffff;
+  letter-spacing: -0.01em;
 }
 
 /* ==========================================================================
