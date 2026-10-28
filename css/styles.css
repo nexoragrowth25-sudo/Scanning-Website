@@ -978,35 +978,259 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
+@media (max-width: 991px) {
+  .hero-ref-section,
+  .page-hero-ref-section {
+    min-height: auto;
+    padding-top: 6rem;
+    padding-bottom: 2.75rem;
+  }
+  .hero-ref-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .hero-ref-title {
+    font-size: clamp(2rem, 4.4vw, 2.75rem);
+    line-height: 1.15;
+  }
+  .hero-ref-right {
+    min-height: 300px;
+    max-width: 480px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .hero-diamond-shape {
+    width: 240px;
+    height: 240px;
+    border-radius: 32px;
+  }
+  .hero-machinery-img {
+    max-width: 380px;
+    max-height: 290px;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-ref-section,
   .page-hero-ref-section {
-    padding-top: 5.5rem;
-    padding-bottom: 2.5rem;
-    min-height: auto;
+    padding-top: 5.75rem !important;
+    padding-bottom: 2.25rem !important;
+    min-height: auto !important;
+    overflow-x: hidden !important;
+    background-position: center top !important;
   }
-  .hero-diamond-shape {
-    width: 250px;
-    height: 250px;
+  .hero-ref-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+  }
+  .hero-ref-left {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .hero-ref-tag {
+    font-size: 0.8rem !important;
+    gap: 0.35rem !important;
+    margin-bottom: 0.75rem !important;
+    display: inline-flex !important;
+    flex-wrap: wrap !important;
+    line-height: 1.35 !important;
+  }
+  .hero-ref-tag .ref-bar {
+    font-size: 1.15rem !important;
+    margin-right: 2px !important;
+  }
+  .hero-ref-title {
+    font-size: clamp(1.7rem, 5.2vw, 2.25rem) !important;
+    line-height: 1.18 !important;
+    margin-bottom: 0.85rem !important;
+    word-break: break-word !important;
+    letter-spacing: -0.02em !important;
+  }
+  .hero-ref-desc {
+    font-size: 0.925rem !important;
+    line-height: 1.55 !important;
+    color: #475569 !important;
+    max-width: 100% !important;
+    margin-bottom: 1.15rem !important;
+  }
+  .hero-feature-pills-ref {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.4rem !important;
+    margin-bottom: 1.15rem !important;
+  }
+  .hero-pill-ref {
+    font-size: 0.775rem !important;
+    padding: 0.3rem 0.65rem !important;
+    line-height: 1.3 !important;
+  }
+  .hero-ref-actions {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 0.6rem !important;
+    margin-bottom: 1.15rem !important;
+    width: 100% !important;
+  }
+  .hero-ref-actions .btn-get-in-touch,
+  .hero-ref-actions .btn,
+  .hero-ref-actions .btn-ref-phone {
+    font-size: 0.875rem !important;
+    padding: 0.65rem 1.15rem !important;
+    border-radius: 8px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+  .hero-ref-breadcrumb {
+    font-size: 0.825rem !important;
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.75rem !important;
   }
   .hero-ref-cards {
-    margin-top: 1.25rem;
-    max-width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-top: 1rem !important;
+    overflow: hidden !important;
+    padding: 4px 0 !important;
   }
   .hero-cards-set {
-    gap: 0.65rem;
-    padding-right: 0.65rem;
+    gap: 0.65rem !important;
+    padding-right: 0.65rem !important;
   }
   .hero-product-card {
-    width: 185px;
-    min-width: 185px;
-    max-width: 185px;
-    flex: 0 0 185px;
-    padding: 0.65rem 0.75rem;
+    width: 168px !important;
+    min-width: 168px !important;
+    max-width: 168px !important;
+    flex: 0 0 168px !important;
+    padding: 0.6rem 0.7rem !important;
+    border-radius: 10px !important;
   }
   .card-img-box {
-    width: 72px;
-    height: 72px;
+    width: 62px !important;
+    height: 62px !important;
+    padding: 4px !important;
+    border-radius: 8px !important;
+  }
+  .card-name {
+    font-size: 0.75rem !important;
+  }
+  .card-sub {
+    font-size: 0.72rem !important;
+  }
+  .card-num {
+    font-size: 0.68rem !important;
+  }
+  .card-action-btn {
+    width: 24px !important;
+    height: 24px !important;
+    margin-top: 4px !important;
+  }
+  .card-action-btn svg {
+    width: 12px !important;
+    height: 12px !important;
+  }
+  .hero-ref-right {
+    min-height: 220px !important;
+    height: auto !important;
+    width: 100% !important;
+    max-width: 320px !important;
+    margin: 0.75rem auto 0 auto !important;
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    overflow: visible !important;
+  }
+  .hero-diamond-shape {
+    width: 175px !important;
+    height: 175px !important;
+    border-radius: 26px !important;
+    box-shadow: 0 10px 30px rgba(0, 56, 102, 0.12) !important;
+  }
+  .hero-diamond-logo {
+    width: 50% !important;
+    height: 50% !important;
+    opacity: 0.12 !important;
+  }
+  .hero-machinery-img {
+    width: 100% !important;
+    max-width: 270px !important;
+    max-height: 210px !important;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-ref-section,
+  .page-hero-ref-section {
+    padding-top: 5.25rem !important;
+    padding-bottom: 1.75rem !important;
+  }
+  .hero-ref-title {
+    font-size: clamp(1.45rem, 6.2vw, 1.85rem) !important;
+    line-height: 1.22 !important;
+    margin-bottom: 0.75rem !important;
+  }
+  .hero-ref-desc {
+    font-size: 0.875rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 1rem !important;
+  }
+  .hero-ref-actions {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0.5rem !important;
+  }
+  .hero-ref-actions .btn-get-in-touch,
+  .hero-ref-actions .btn,
+  .hero-ref-actions .btn-ref-phone {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
+  .hero-pill-ref {
+    font-size: 0.725rem !important;
+    padding: 0.25rem 0.55rem !important;
+  }
+  .hero-ref-cards {
+    margin-top: 0.85rem !important;
+  }
+  .hero-product-card {
+    width: 152px !important;
+    min-width: 152px !important;
+    max-width: 152px !important;
+    flex: 0 0 152px !important;
+    padding: 0.5rem 0.6rem !important;
+  }
+  .card-img-box {
+    width: 50px !important;
+    height: 50px !important;
+    padding: 3px !important;
+  }
+  .card-name {
+    font-size: 0.7rem !important;
+  }
+  .card-sub {
+    font-size: 0.68rem !important;
+  }
+  .hero-ref-right {
+    min-height: 185px !important;
+    max-width: 270px !important;
+    margin: 0.5rem auto 0 auto !important;
+  }
+  .hero-diamond-shape {
+    width: 145px !important;
+    height: 145px !important;
+    border-radius: 20px !important;
+  }
+  .hero-machinery-img {
+    max-width: 220px !important;
+    max-height: 175px !important;
   }
 }
 
@@ -2614,14 +2838,18 @@ h1, h2, h3, h4, h5, h6 {
 .cta-card-icon {
   width: 50px;
   height: 50px;
+  min-width: 50px;
+  min-height: 50px;
   border-radius: var(--radius-lg);
-  background: #ffffff;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
-  border: 2px solid rgba(255, 255, 255, 0.95);
+  background: #ffffff !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.28);
+  border: 2px solid #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
+  position: relative;
+  z-index: 2;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -2632,7 +2860,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .cta-card-icon svg {
-  stroke: #fe6911;
+  width: 24px;
+  height: 24px;
+  stroke: #fe6911 !important;
+  stroke-width: 2.3;
+  display: block;
   transition: transform 0.25s ease;
 }
 
@@ -2644,6 +2876,37 @@ h1, h2, h3, h4, h5, h6 {
 
 .cta-contact-card:hover .cta-card-icon svg {
   transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .cta-banner {
+    padding: 3.5rem 0 !important;
+  }
+  .cta-grid {
+    gap: 2rem !important;
+  }
+  .cta-text-side p {
+    font-size: 1rem !important;
+    margin-bottom: 1.5rem !important;
+  }
+  .cta-contact-card {
+    padding: 0.85rem 1.15rem !important;
+    gap: 1rem !important;
+  }
+  .cta-card-icon {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
+  }
+  .cta-card-icon svg {
+    width: 20px !important;
+    height: 20px !important;
+  }
+  .cta-card-info p:last-child {
+    font-size: clamp(0.85rem, 3.8vw, 1rem) !important;
+    word-break: break-word !important;
+  }
 }
 
 .cta-card-info p:first-child {
